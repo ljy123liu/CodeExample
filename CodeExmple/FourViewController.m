@@ -9,6 +9,7 @@
 #import "FourViewController.h"
 
 @interface FourViewController ()
+@property (nonatomic,strong)UITableView *tableView;
 
 @end
 
@@ -16,7 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self addUI];
+}
+
+- (void)addUI {
+//    self.view.backgroundColor = [UIColor redColor];
+    self.tableView = [[UITableView alloc]initWithFrame:self.view.frame];
+//    self.tableView.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:_tableView];
 }
 
 - (void)didReceiveMemoryWarning {

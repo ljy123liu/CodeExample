@@ -7,16 +7,35 @@
 //
 
 #import "TwoViewController.h"
-
-@interface TwoViewController ()
-
+#import "MBProgressHUD.h"
+@interface TwoViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic,strong)UITableView *tableView;
 @end
 
 @implementation TwoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self addUI];
+}
+
+- (void)addUI {
+    self.tableView = [[UITableView alloc]initWithFrame:self.view.frame];
+    self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
+    [self.view addSubview:_tableView];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *iden = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:iden];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:iden];
+    }
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {

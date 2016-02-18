@@ -26,7 +26,7 @@
     
     TwoViewController *vc2 = [TwoViewController new];
     UINavigationController *nv2 = [[UINavigationController alloc]initWithRootViewController:vc2];
-    vc2.title = @"商城";
+    vc2.title = @"三方库";
     
     ThreeViewController *vc3 = [ThreeViewController new];
     UINavigationController *nv3 = [[UINavigationController alloc]initWithRootViewController:vc3];
