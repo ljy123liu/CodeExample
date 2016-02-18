@@ -140,21 +140,8 @@
 				2D908DF91C759CF500BCC770 /* Lib */,
 				2D908DFA1C759CF500BCC770 /* Other */,
 				2D908DFC1C759D4500BCC770 /* Category */,
-				2D908DBC1C7556CA00BCC770 /* AppDelegate.h */,
-				2D908DBD1C7556CA00BCC770 /* AppDelegate.m */,
-				2D908DF51C7557DB00BCC770 /* TabBarViewController.h */,
-				2D908DF61C7557DB00BCC770 /* TabBarViewController.m */,
-				2D908DBF1C7556CA00BCC770 /* ViewController.h */,
-				2D908DC01C7556CA00BCC770 /* ViewController.m */,
-				2D908DEC1C7556FB00BCC770 /* TwoViewController.h */,
-				2D908DED1C7556FB00BCC770 /* TwoViewController.m */,
-				2D908DEF1C75570200BCC770 /* ThreeViewController.h */,
-				2D908DF01C75570200BCC770 /* ThreeViewController.m */,
-				2D908DF21C75570C00BCC770 /* FourViewController.h */,
-				2D908DF31C75570C00BCC770 /* FourViewController.m */,
-				2D908DC21C7556CA00BCC770 /* Main.storyboard */,
-				2D908DC51C7556CA00BCC770 /* Assets.xcassets */,
-				2D908DC71C7556CA00BCC770 /* LaunchScreen.storyboard */,
+				2D908E0D1C75BC0000BCC770 /* AppDelegate */,
+				2D908E0C1C75BBD400BCC770 /* TabBar */,
 				2D908DB91C7556CA00BCC770 /* Supporting Files */,
 			);
 			path = CodeExmple;
@@ -163,6 +150,9 @@
 		2D908DB91C7556CA00BCC770 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2D908DC21C7556CA00BCC770 /* Main.storyboard */,
+				2D908DC51C7556CA00BCC770 /* Assets.xcassets */,
+				2D908DC71C7556CA00BCC770 /* LaunchScreen.storyboard */,
 				2D908DCA1C7556CA00BCC770 /* Info.plist */,
 				2D908DBA1C7556CA00BCC770 /* main.m */,
 				2D908E081C759EE300BCC770 /* CodeExamplePCH.pch */,
@@ -231,6 +221,32 @@
 			);
 			name = Category;
 			path = Other/Category;
+			sourceTree = "<group>";
+		};
+		2D908E0C1C75BBD400BCC770 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				2D908DF51C7557DB00BCC770 /* TabBarViewController.h */,
+				2D908DF61C7557DB00BCC770 /* TabBarViewController.m */,
+				2D908DBF1C7556CA00BCC770 /* ViewController.h */,
+				2D908DC01C7556CA00BCC770 /* ViewController.m */,
+				2D908DEC1C7556FB00BCC770 /* TwoViewController.h */,
+				2D908DED1C7556FB00BCC770 /* TwoViewController.m */,
+				2D908DEF1C75570200BCC770 /* ThreeViewController.h */,
+				2D908DF01C75570200BCC770 /* ThreeViewController.m */,
+				2D908DF21C75570C00BCC770 /* FourViewController.h */,
+				2D908DF31C75570C00BCC770 /* FourViewController.m */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		2D908E0D1C75BC0000BCC770 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2D908DBC1C7556CA00BCC770 /* AppDelegate.h */,
+				2D908DBD1C7556CA00BCC770 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 		8A170C419C57A15B40081053 /* Frameworks */ = {
