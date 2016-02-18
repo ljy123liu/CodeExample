@@ -22,19 +22,19 @@
     
     ViewController *vc1 = [ViewController new];
     UINavigationController *nv1 = [[UINavigationController alloc]initWithRootViewController:vc1];
-    vc1.title = @"主页";
+    vc1.title = @"UI";
     
     TwoViewController *vc2 = [TwoViewController new];
     UINavigationController *nv2 = [[UINavigationController alloc]initWithRootViewController:vc2];
-    vc2.title = @"三方库";
+    vc2.title = @"Code";
     
     ThreeViewController *vc3 = [ThreeViewController new];
     UINavigationController *nv3 = [[UINavigationController alloc]initWithRootViewController:vc3];
-    vc3.title = @"空间";
+    vc3.title = @"Lib";
     
     FourViewController *vc4 = [FourViewController new];
     UINavigationController *nv4 = [[UINavigationController alloc]initWithRootViewController:vc4];
-    vc4.title = @"其它";
+    vc4.title = @"Other";
     
     [self addChildViewController:nv1];
     [self addChildViewController:nv2];

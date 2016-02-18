@@ -7,10 +7,10 @@
 //
 
 #import "FourViewController.h"
-
-@interface FourViewController ()
+#import "SpliceCircleViewController.h"
+@interface FourViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
-
+@property (nonatomic,strong)NSMutableArray *dataArray;
 @end
 
 @implementation FourViewController
@@ -18,14 +18,48 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addUI];
+    [self dataTitle];
 }
 
 - (void)addUI {
-//    self.view.backgroundColor = [UIColor redColor];
+    
     self.tableView = [[UITableView alloc]initWithFrame:self.view.frame];
-//    self.tableView.backgroundColor = [UIColor blueColor];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     [self.view addSubview:_tableView];
 }
+
+- (void)dataTitle {
+    
+    self.dataArray = [NSMutableArray array];
+    
+    NSString *str1 = @"SpliceCircle";
+    [self.dataArray addObject:str1];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return _dataArray.count;
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *iden = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:iden];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:iden];
+    }
+    NSString *str = _dataArray[indexPath.row];
+    cell.textLabel.text = str;
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    SpliceCircleViewController *sc = [SpliceCircleViewController new];
+    [self.navigationController pushViewController:sc animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

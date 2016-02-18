@@ -1,5 +1,5 @@
 //
-//  FourViewController.h
+//  SpliceCircleViewController.h
 //  CodeExmple
 //
 //  Created by LIUYONG on 2/18/16.
@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef NS_ENUM(NSInteger,CellTitle) {
-    SpliceCircle = 0
-};
-@interface FourViewController : UIViewController
+
+@interface SpliceCircleViewController : UIViewController
 
 @end
