@@ -27,27 +27,22 @@
     [scrollView addSubview:TestView];
 }
 
--(void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     static float lastOffY  = 0;
     float curOffY = scrollView.contentOffset.y;
     
     if (scrollView.frame.size.height >= scrollView.contentSize.height ||      //内容高度低于scrollView高度，不隐藏
         fabs(curOffY) + SCREEN_SIZE_HEIGHT > scrollView.contentSize.height || //拉至最底部时，不做处理
         curOffY < 0                                                           //拉至最顶部时，不做处理
-        )
-    {
+        ){
         return;
     }
-    if (curOffY - lastOffY > 40)
-    {
+    if (curOffY - lastOffY > 40){
         //向上
         lastOffY = curOffY;
         [self hideTabBar];
-        
     }
-    else if(lastOffY -curOffY >40)
-    {
+    else if(lastOffY - curOffY > 40){
         //向下
         lastOffY = curOffY;
         [self showTabBar];
@@ -55,10 +50,9 @@
 }
 
 
-- (void)showTabBar
-{
-    if (self.tabBarController.tabBar.hidden == NO)
-    {
+- (void)showTabBar{
+    
+    if (self.tabBarController.tabBar.hidden == NO){
         return;
     }
     
@@ -86,13 +80,11 @@
     animation1.subtype = kCATransitionFromBottom;
     self.navigationController.navigationBarHidden = NO;
     [self.navigationController.navigationBar.layer addAnimation:animation1 forKey:@"animation3"];
-    
 }
 
-- (void)hideTabBar
-{
-    if (self.tabBarController.tabBar.hidden == YES)
-    {
+- (void)hideTabBar{
+    
+    if (self.tabBarController.tabBar.hidden == YES){
         return;
     }
     UIView *contentView;
@@ -108,7 +100,7 @@
     CATransition *animation1 = [CATransition animation];
     animation1.timingFunction=UIViewAnimationCurveEaseInOut;
     animation1.duration = 0.4f;
-    animation1.delegate =self;
+    animation1.delegate = self;
     animation1.type = kCATransitionReveal;
     animation1.subtype = kCATransitionFromTop;
     self.navigationController.navigationBarHidden = YES;

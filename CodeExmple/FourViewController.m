@@ -38,7 +38,7 @@
 //    NSString *str2 = @"HideNavBarAndTabBar";
 //    [self.dataArray addObject:str1];
 //    [self.dataArray addObject:str2];
-    self.dataArray = @[@"SpliceCircle",@"HideNavBarAndTabBar"];
+    self.dataArray = @[@"SpliceCircleViewController",@"HideNavBarAndTabBarViewController"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -59,22 +59,15 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    switch (indexPath.row) {
-//        case SpliceCircle:
-//            <#statements#>
-//            break;
-//            
-//        default:
-//            break;
-//    }
-    if (indexPath.row == 0) {
-        SpliceCircleViewController *sc = [SpliceCircleViewController new];
-        [self.navigationController pushViewController:sc animated:YES];
-    }else if (indexPath.row == 1) {
-        HideNavBarAndTabBarViewController *hide = [HideNavBarAndTabBarViewController new];
-        [self.navigationController pushViewController:hide animated:YES];
+
+    NSString *className = self.dataArray[indexPath.row];
+    Class class = NSClassFromString(className);
+    if (class) {
+        UIViewController *ctrl = class.new;
+        ctrl.title = _dataArray[indexPath.row];
+        [self.navigationController pushViewController:ctrl animated:YES];
     }
-    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
