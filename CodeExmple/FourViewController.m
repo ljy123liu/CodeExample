@@ -8,9 +8,10 @@
 
 #import "FourViewController.h"
 #import "SpliceCircleViewController.h"
+#import "HideNavBarAndTabBarViewController.h"
 @interface FourViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
-@property (nonatomic,strong)NSMutableArray *dataArray;
+@property (nonatomic,strong)NSArray *dataArray;
 @end
 
 @implementation FourViewController
@@ -31,16 +32,18 @@
 
 - (void)dataTitle {
     
-    self.dataArray = [NSMutableArray array];
+    self.dataArray = [NSArray array];
     
-    NSString *str1 = @"SpliceCircle";
-    [self.dataArray addObject:str1];
+//    NSString *str1 = @"SpliceCircle";
+//    NSString *str2 = @"HideNavBarAndTabBar";
+//    [self.dataArray addObject:str1];
+//    [self.dataArray addObject:str2];
+    self.dataArray = @[@"SpliceCircle",@"HideNavBarAndTabBar"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return _dataArray.count;
-    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -56,8 +59,22 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    SpliceCircleViewController *sc = [SpliceCircleViewController new];
-    [self.navigationController pushViewController:sc animated:YES];
+//    switch (indexPath.row) {
+//        case SpliceCircle:
+//            <#statements#>
+//            break;
+//            
+//        default:
+//            break;
+//    }
+    if (indexPath.row == 0) {
+        SpliceCircleViewController *sc = [SpliceCircleViewController new];
+        [self.navigationController pushViewController:sc animated:YES];
+    }else if (indexPath.row == 1) {
+        HideNavBarAndTabBarViewController *hide = [HideNavBarAndTabBarViewController new];
+        [self.navigationController pushViewController:hide animated:YES];
+    }
+    
 }
 
 

@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 typedef NS_ENUM(NSInteger,CellTitle) {
-    SpliceCircle = 0
+    SpliceCircle = 0,
+    TestModalAndDismiss
 };
 @interface FourViewController : UIViewController
 

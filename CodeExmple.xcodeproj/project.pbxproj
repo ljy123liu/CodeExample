@@ -24,6 +24,7 @@
 		2D908E061C759DE000BCC770 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908E021C759DE000BCC770 /* UIBarButtonItem+Extension.m */; };
 		2D908E071C759DE000BCC770 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908E041C759DE000BCC770 /* UIImage+Extension.m */; };
 		2D908E0B1C75A4A700BCC770 /* SpliceCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908E0A1C75A4A700BCC770 /* SpliceCircleViewController.m */; };
+		2DB1A01F1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1A01E1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.m */; };
 		927EB04BAA61C8804B8435E1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB55230364E4E2858368A7A9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,8 @@
 		2D908E081C759EE300BCC770 /* CodeExamplePCH.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeExamplePCH.pch; sourceTree = "<group>"; };
 		2D908E091C75A4A700BCC770 /* SpliceCircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpliceCircleViewController.h; sourceTree = "<group>"; };
 		2D908E0A1C75A4A700BCC770 /* SpliceCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpliceCircleViewController.m; sourceTree = "<group>"; };
+		2DB1A01D1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HideNavBarAndTabBarViewController.h; sourceTree = "<group>"; };
+		2DB1A01E1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HideNavBarAndTabBarViewController.m; sourceTree = "<group>"; };
 		38A5DEF78146CEF53A1681E2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EB55230364E4E2858368A7A9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -197,6 +200,8 @@
 			children = (
 				2D908E091C75A4A700BCC770 /* SpliceCircleViewController.h */,
 				2D908E0A1C75A4A700BCC770 /* SpliceCircleViewController.m */,
+				2DB1A01D1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.h */,
+				2DB1A01E1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -455,6 +460,7 @@
 				2D908E061C759DE000BCC770 /* UIBarButtonItem+Extension.m in Sources */,
 				2D908DBB1C7556CA00BCC770 /* main.m in Sources */,
 				2D908E051C759DE000BCC770 /* Foundation+Log.m in Sources */,
+				2DB1A01F1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.m in Sources */,
 				2D908DEE1C7556FB00BCC770 /* TwoViewController.m in Sources */,
 				2D908DFF1C759DAC00BCC770 /* UIView+Extension.m in Sources */,
 				2D908E071C759DE000BCC770 /* UIImage+Extension.m in Sources */,

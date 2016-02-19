@@ -17,8 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    [self.view addSubview:button];
+    [button addTarget:self action:@selector(nextVC) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)nextVC {
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
