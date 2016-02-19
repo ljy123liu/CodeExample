@@ -33,11 +33,6 @@
 - (void)dataTitle {
     
     self.dataArray = [NSArray array];
-    
-//    NSString *str1 = @"SpliceCircle";
-//    NSString *str2 = @"HideNavBarAndTabBar";
-//    [self.dataArray addObject:str1];
-//    [self.dataArray addObject:str2];
     self.dataArray = @[@"SpliceCircleViewController",@"HideNavBarAndTabBarViewController"];
 }
 
@@ -67,6 +62,7 @@
         ctrl.title = _dataArray[indexPath.row];
         [self.navigationController pushViewController:ctrl animated:YES];
     }
+    //取消返回时候的选中高亮状态
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
