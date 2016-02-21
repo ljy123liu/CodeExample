@@ -25,6 +25,10 @@
 		2D908E071C759DE000BCC770 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908E041C759DE000BCC770 /* UIImage+Extension.m */; };
 		2D908E0B1C75A4A700BCC770 /* SpliceCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908E0A1C75A4A700BCC770 /* SpliceCircleViewController.m */; };
 		2DB1A01F1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1A01E1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.m */; };
+		2DB1A0221C7722640074A8B5 /* SpliceCircleUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1A0211C7722640074A8B5 /* SpliceCircleUI.m */; };
+		2DB1A0241C77227B0074A8B5 /* SpliceCircleUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB1A0231C77227B0074A8B5 /* SpliceCircleUI.xib */; };
+		2DEE81FE1C79E0170041CB11 /* ActivityIndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEE81FD1C79E0170041CB11 /* ActivityIndicatorViewController.m */; };
+		2DEE82011C79F15F0041CB11 /* AlertControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEE82001C79F15F0041CB11 /* AlertControllerViewController.m */; };
 		927EB04BAA61C8804B8435E1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB55230364E4E2858368A7A9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +87,13 @@
 		2D908E0A1C75A4A700BCC770 /* SpliceCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpliceCircleViewController.m; sourceTree = "<group>"; };
 		2DB1A01D1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HideNavBarAndTabBarViewController.h; sourceTree = "<group>"; };
 		2DB1A01E1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HideNavBarAndTabBarViewController.m; sourceTree = "<group>"; };
+		2DB1A0201C7722640074A8B5 /* SpliceCircleUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpliceCircleUI.h; sourceTree = "<group>"; };
+		2DB1A0211C7722640074A8B5 /* SpliceCircleUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpliceCircleUI.m; sourceTree = "<group>"; };
+		2DB1A0231C77227B0074A8B5 /* SpliceCircleUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpliceCircleUI.xib; sourceTree = "<group>"; };
+		2DEE81FC1C79E0170041CB11 /* ActivityIndicatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityIndicatorViewController.h; sourceTree = "<group>"; };
+		2DEE81FD1C79E0170041CB11 /* ActivityIndicatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityIndicatorViewController.m; sourceTree = "<group>"; };
+		2DEE81FF1C79F15F0041CB11 /* AlertControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertControllerViewController.h; sourceTree = "<group>"; };
+		2DEE82001C79F15F0041CB11 /* AlertControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertControllerViewController.m; sourceTree = "<group>"; };
 		38A5DEF78146CEF53A1681E2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EB55230364E4E2858368A7A9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -200,6 +211,9 @@
 			children = (
 				2D908E091C75A4A700BCC770 /* SpliceCircleViewController.h */,
 				2D908E0A1C75A4A700BCC770 /* SpliceCircleViewController.m */,
+				2DB1A0201C7722640074A8B5 /* SpliceCircleUI.h */,
+				2DB1A0211C7722640074A8B5 /* SpliceCircleUI.m */,
+				2DB1A0231C77227B0074A8B5 /* SpliceCircleUI.xib */,
 				2DB1A01D1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.h */,
 				2DB1A01E1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.m */,
 			);
@@ -209,6 +223,10 @@
 		2D908DFB1C759CF500BCC770 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2DEE81FC1C79E0170041CB11 /* ActivityIndicatorViewController.h */,
+				2DEE81FD1C79E0170041CB11 /* ActivityIndicatorViewController.m */,
+				2DEE81FF1C79F15F0041CB11 /* AlertControllerViewController.h */,
+				2DEE82001C79F15F0041CB11 /* AlertControllerViewController.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -380,6 +398,7 @@
 				2D908DC91C7556CA00BCC770 /* LaunchScreen.storyboard in Resources */,
 				2D908DC61C7556CA00BCC770 /* Assets.xcassets in Resources */,
 				2D908DC41C7556CA00BCC770 /* Main.storyboard in Resources */,
+				2DB1A0241C77227B0074A8B5 /* SpliceCircleUI.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,9 +476,12 @@
 				2D908DF71C7557DB00BCC770 /* TabBarViewController.m in Sources */,
 				2D908DBE1C7556CA00BCC770 /* AppDelegate.m in Sources */,
 				2D908E0B1C75A4A700BCC770 /* SpliceCircleViewController.m in Sources */,
+				2DEE82011C79F15F0041CB11 /* AlertControllerViewController.m in Sources */,
 				2D908E061C759DE000BCC770 /* UIBarButtonItem+Extension.m in Sources */,
 				2D908DBB1C7556CA00BCC770 /* main.m in Sources */,
+				2DB1A0221C7722640074A8B5 /* SpliceCircleUI.m in Sources */,
 				2D908E051C759DE000BCC770 /* Foundation+Log.m in Sources */,
+				2DEE81FE1C79E0170041CB11 /* ActivityIndicatorViewController.m in Sources */,
 				2DB1A01F1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.m in Sources */,
 				2D908DEE1C7556FB00BCC770 /* TwoViewController.m in Sources */,
 				2D908DFF1C759DAC00BCC770 /* UIView+Extension.m in Sources */,

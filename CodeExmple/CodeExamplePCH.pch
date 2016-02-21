@@ -9,11 +9,15 @@
 #ifndef CodeExamplePCH_pch
 #define CodeExamplePCH_pch
 
+#if DEBUG
+#define LLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define LLog(fmt, ...)
+#endif
+
 #import "UIImage+Extension.h"
 #import "UIView+Extension.h"
 #import "UIBarButtonItem+Extension.h"
-#import "Foundation+Log.m"
-
 
 #define SCREEN_SIZE_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define SCREEN_SIZE_WIDTH [UIScreen mainScreen].bounds.size.width

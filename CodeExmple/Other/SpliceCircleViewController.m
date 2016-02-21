@@ -7,7 +7,7 @@
 //
 
 #import "SpliceCircleViewController.h"
-
+#import "SpliceCircleUI.h"
 @interface SpliceCircleViewController ()
 
 @end
@@ -16,10 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"SpliceCircle";
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self addUI];
     [self showCircle:20 d1:20 d2:40];
 }
+
+- (void)addUI {
+    self.title = @"SpliceCircle";
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    SpliceCircleUI *scUI = [[[NSBundle mainBundle]loadNibNamed:@"SpliceCircleUI" owner:self options:nil]firstObject];
+    scUI.frame = CGRectMake(15, 80, SCREEN_SIZE_WIDTH,90);
+    [self.view addSubview:scUI];
+}
+
+
 //只选两种圆的情况
 - (void)showCircle:(int)n d1:(double)d1 d2:(double)d2 {
     
