@@ -18,4 +18,6 @@
  *  根据图片名返回一张能够自由拉伸的图片
  */
 + (UIImage *)resizedImage:(NSString *)name;
+
+- (UIImage *)imageWithRoundedCornersAndSize:(CGSize)sizeToFit andCornerRadius:(CGFloat)radius;
 @end
