@@ -8,6 +8,7 @@
 
 #import "PostValueViewController.h"
 #import "PostValue2ViewController.h"
+#import "DataSource.h"
 @interface PostValueViewController ()<postValueDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *delegateLabel;
 @property (weak, nonatomic) IBOutlet UIButton *blockLabel;
@@ -24,26 +25,43 @@
     [super viewDidLoad];
     self.title = @"页面传值";
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    //NSUserDefaults
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"userDefault"] length] != 0) {
+        NSString *str = [[NSUserDefaults standardUserDefaults] objectForKey:@"userDefault"];
+        [self.userDefaultLabel setTitle:str forState:UIControlStateNormal];
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"userDefault"];
+    }
+    
+    //单例
+    DataSource *dataSource = [DataSource shareDataSource];
+    if (dataSource.value.length != 0) {
+        [self.singletonLabel setTitle:dataSource.value forState:UIControlStateNormal];
+    }
+    
+    
+}
 - (IBAction)delegateNext:(UIButton *)sender {
-    self.vc = [PostValue2ViewController new];
+    PostValue2ViewController *vc2 = [PostValue2ViewController new];
     //设置代理
-    self.vc.delegate = self;
-    [self.navigationController pushViewController:self.vc animated:YES];
+    vc2.delegate = self;
+    [self.navigationController pushViewController:vc2 animated:YES];
 }
 
 - (IBAction)blockNext:(UIButton *)sender {
-    self.vc = [PostValue2ViewController new];
+    PostValue2ViewController *vc2 = [PostValue2ViewController new];
     //block
     @weakify(self);
-    self.vc.textBlock = ^(NSString *str){
+    vc2.textBlock = ^(NSString *str){
         @strongify(self);
         [self.blockLabel setTitle:str forState:UIControlStateNormal];
     };
-    [self.navigationController pushViewController:self.vc animated:YES];
+    [self.navigationController pushViewController:vc2 animated:YES];
 }
 
 - (IBAction)notificationCenter:(UIButton *)sender {
-    self.vc = [PostValue2ViewController new];
+    PostValue2ViewController *vc2 = [PostValue2ViewController new];
     //1.通知中心，传值方式一：
     //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationCenterLabel:) name:@"notificationCenter" object:nil];
     
@@ -52,7 +70,7 @@
     [[NSNotificationCenter defaultCenter] addObserverForName:@"notificationCenter" object:nil queue:queue usingBlock:^(NSNotification * _Nonnull note) {
         [self.notificationCenter setTitle:note.userInfo[@"str"] forState:UIControlStateNormal];
     }];
-    [self.navigationController pushViewController:self.vc animated:YES];
+    [self.navigationController pushViewController:vc2 animated:YES];
 }
 
 - (IBAction)KVO:(UIButton *)sender {
@@ -102,6 +120,7 @@
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"notificationCenter" object:nil];
+//    [self.vc removeObserver:self forKeyPath:@"KVO"];
     LLog(@"PostValue1 dealloc");
 }
 

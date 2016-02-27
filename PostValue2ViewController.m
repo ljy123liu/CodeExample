@@ -7,7 +7,7 @@
 //
 
 #import "PostValue2ViewController.h"
-
+#import "DataSource.h"
 @interface PostValue2ViewController ()<UITextViewDelegate>
 //@property (nonatomic, strong) PostValue2ViewController *vc2;
 
@@ -39,16 +39,18 @@
 
 - (IBAction)userDefaultStyle:(UIButton *)sender {
     
-    
+    [[NSUserDefaults standardUserDefaults] setObject:self.KVOtextFeild.text forKey:@"userDefault"];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)singletonStyle:(UIButton *)sender {
+    DataSource *dataSource = [DataSource shareDataSource];
+    dataSource.value = self.KVOtextFeild.text;
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)KVO:(UIButton *)sender {
-    self.KVO = self.KVOtextFeild.text;
+//    self.KVO = self.KVOtextFeild.text;
     [self.navigationController popViewControllerAnimated:YES];
 }
 
