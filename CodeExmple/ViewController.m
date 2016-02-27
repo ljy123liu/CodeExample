@@ -33,7 +33,7 @@
 - (void)dataTitle {
     
     self.dataArray = [NSArray array];
-    self.dataArray = @[@"ActivityIndicatorViewController",@"AlertControllerViewController"];
+    self.dataArray = @[@"ActivityIndicatorViewController",@"AlertControllerViewController",@"DatePickerViewController",@"PickerViewViewController"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

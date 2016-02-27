@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostValueViewController">
+            <connections>
+                <outlet property="KVOLabel" destination="Uix-yq-dCy" id="kyh-7s-T17"/>
+                <outlet property="blockLabel" destination="66Z-wj-AuV" id="Dyl-tL-Lme"/>
+                <outlet property="delegateLabel" destination="lTu-pp-yZj" id="TQK-tW-EiX"/>
+                <outlet property="notificationCenter" destination="v7H-yz-Ucb" id="PXP-fi-ZBG"/>
+                <outlet property="singletonLabel" destination="qm1-cg-oy5" id="Hag-EH-ZXi"/>
+                <outlet property="userDefaultLabel" destination="eqR-ii-jAb" id="9ed-vg-Gqw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTu-pp-yZj">
+                    <rect key="frame" x="136" y="115" width="174" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Delegate"/>
+                    <connections>
+                        <action selector="delegateNext:" destination="-1" eventType="touchUpInside" id="qTJ-gp-zyx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66Z-wj-AuV">
+                    <rect key="frame" x="136" y="171" width="174" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Block"/>
+                    <connections>
+                        <action selector="blockNext:" destination="-1" eventType="touchUpInside" id="IwU-KA-tZu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7H-yz-Ucb">
+                    <rect key="frame" x="136" y="226" width="174" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="NotificationCenter"/>
+                    <connections>
+                        <action selector="notificationCenter:" destination="-1" eventType="touchUpInside" id="vf0-jX-lIz"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uix-yq-dCy">
+                    <rect key="frame" x="136" y="281" width="174" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="KVO"/>
+                    <connections>
+                        <action selector="KVO:" destination="-1" eventType="touchUpInside" id="mnd-OS-pKg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqR-ii-jAb">
+                    <rect key="frame" x="136" y="336" width="174" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="NSUserDefault"/>
+                    <connections>
+                        <action selector="NSUserDefaultNext:" destination="-1" eventType="touchUpInside" id="hrt-U0-giO"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qm1-cg-oy5">
+                    <rect key="frame" x="136" y="399" width="174" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Singleton"/>
+                    <connections>
+                        <action selector="singletonNext:" destination="-1" eventType="touchUpInside" id="dyb-BX-Jo0"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="247" y="215"/>
+        </view>
+    </objects>
+</document>
