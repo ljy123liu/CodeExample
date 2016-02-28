@@ -7,7 +7,7 @@
 //
 
 #import "RoundCornerViewController.h"
-
+#import "UIImageView+RoundRect.h"
 @interface RoundCornerViewController ()
 
 @end
@@ -16,19 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor lightGrayColor];
     // Do any additional setup after loading the view.
-    //TODO:高性能切圆角
-    self.view.backgroundColor = [UIColor whiteColor];
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
-    imageView.backgroundColor = [UIColor grayColor];
+    //高性能切圆角
+    UIImageView *imageView = [UIImageView roundedRectInitWithFrame:CGRectMake(100, 100, 100, 100) imageNamed:@"2"];
     [self.view addSubview:imageView];
-    UIImage *image = [UIImage new];
-    imageView.image = [image imageWithRoundedCornersAndSize:CGSizeMake(100, 100) andCornerRadius:100];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc {
+    LLog(@"RoundCornerViewController.h  dealloc  dealloc dealloc");
 }
 
 /*

@@ -20,6 +20,10 @@
     [super viewDidLoad];
     [self addUI];
     [self dataTitle];
+    /**
+     *  safiri隐藏方式
+     */
+    self.navigationController.hidesBarsOnSwipe = YES;
 }
 
 - (void)addUI {

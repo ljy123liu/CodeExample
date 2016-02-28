@@ -25,6 +25,7 @@
     UIView *TestView = [[UIView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
     TestView.backgroundColor = [UIColor redColor];
     [scrollView addSubview:TestView];
+    
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
