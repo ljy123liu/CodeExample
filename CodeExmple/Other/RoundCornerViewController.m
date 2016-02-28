@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor lightGrayColor];
+    self.title = @"高性能切圆角";
     // Do any additional setup after loading the view.
     //高性能切圆角
     UIImageView *imageView = [UIImageView roundedRectInitWithFrame:CGRectMake(100, 100, 100, 100) imageNamed:@"2"];

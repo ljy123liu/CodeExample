@@ -1,23 +1,24 @@
 //
-//  FourViewController.m
+//  ImageProcessingViewController.m
 //  CodeExmple
 //
-//  Created by LIUYONG on 2/18/16.
+//  Created by LIUYONG on 2/28/16.
 //  Copyright © 2016 WanJianTechnology. All rights reserved.
 //
 
-#import "FourViewController.h"
-#import "SpliceCircleViewController.h"
-#import "HideNavBarAndTabBarViewController.h"
-@interface FourViewController ()<UITableViewDataSource,UITableViewDelegate>
+#import "ImageProcessingViewController.h"
+
+@interface ImageProcessingViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSArray *dataArray;
+
 @end
 
-@implementation FourViewController
+@implementation ImageProcessingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     [self addUI];
     [self dataTitle];
 }
@@ -33,7 +34,7 @@
 - (void)dataTitle {
     
     self.dataArray = [NSArray array];
-    self.dataArray = @[@"SpliceCircleViewController",@"HideNavBarAndTabBarViewController",@"ImageProcessingViewController"];
+    self.dataArray = @[@"RoundCornerViewController",@"StretchImageViewController"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -54,7 +55,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     NSString *className = self.dataArray[indexPath.row];
     Class class = NSClassFromString(className);
     if (class) {

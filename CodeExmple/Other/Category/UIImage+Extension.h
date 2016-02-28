@@ -20,4 +20,14 @@
 + (UIImage *)resizedImage:(NSString *)name;
 
 - (UIImage *)imageWithRoundedCornersAndSize:(CGSize)sizeToFit andCornerRadius:(CGFloat)radius;
+
+/**
+ *  根据颜色生成图片
+ *
+ *  @param color <#color description#>
+ *  @param size  <#size description#>
+ *
+ *  @return <#return value description#>
+ */
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
 @end

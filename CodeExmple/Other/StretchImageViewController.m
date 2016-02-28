@@ -35,6 +35,10 @@
     UIImage *image2 = [self strectImage:@"strectch" capInsets:insets2];
     imageView.image = image2;
     [self.view addSubview:imageView];
+    
+    UIImageView *fillImageWithColor = [[UIImageView alloc]initWithFrame:CGRectMake(100, 400, 150, 100)];
+    fillImageWithColor.image = [UIImage imageWithColor:[UIColor redColor] size:fillImageWithColor.frame.size];
+    [self.view addSubview:fillImageWithColor];
 }
 
 - (UIImage *)strectImage:(NSString *)imageName capInsets:(UIEdgeInsets)insets{

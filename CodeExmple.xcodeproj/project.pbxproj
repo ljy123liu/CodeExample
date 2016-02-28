@@ -36,6 +36,7 @@
 		2DB0B3151C82C9BF00B31783 /* UIImageView+RoundRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0B3141C82C9BF00B31783 /* UIImageView+RoundRect.m */; };
 		2DB0B3181C82CF6900B31783 /* StretchImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0B3171C82CF6900B31783 /* StretchImageViewController.m */; };
 		2DB0B31C1C82CFF800B31783 /* strectch.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DB0B31B1C82CFF800B31783 /* strectch.png */; };
+		2DB0B31F1C82E25B00B31783 /* ImageProcessingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0B31E1C82E25B00B31783 /* ImageProcessingViewController.m */; };
 		2DB1A01F1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1A01E1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.m */; };
 		2DB1A0221C7722640074A8B5 /* SpliceCircleUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1A0211C7722640074A8B5 /* SpliceCircleUI.m */; };
 		2DB1A0241C77227B0074A8B5 /* SpliceCircleUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB1A0231C77227B0074A8B5 /* SpliceCircleUI.xib */; };
@@ -118,6 +119,8 @@
 		2DB0B3161C82CF6900B31783 /* StretchImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StretchImageViewController.h; sourceTree = "<group>"; };
 		2DB0B3171C82CF6900B31783 /* StretchImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StretchImageViewController.m; sourceTree = "<group>"; };
 		2DB0B31B1C82CFF800B31783 /* strectch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = strectch.png; sourceTree = "<group>"; };
+		2DB0B31D1C82E25B00B31783 /* ImageProcessingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingViewController.h; sourceTree = "<group>"; };
+		2DB0B31E1C82E25B00B31783 /* ImageProcessingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageProcessingViewController.m; sourceTree = "<group>"; };
 		2DB1A01D1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HideNavBarAndTabBarViewController.h; sourceTree = "<group>"; };
 		2DB1A01E1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HideNavBarAndTabBarViewController.m; sourceTree = "<group>"; };
 		2DB1A0201C7722640074A8B5 /* SpliceCircleUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpliceCircleUI.h; sourceTree = "<group>"; };
@@ -258,6 +261,7 @@
 		2D908DFA1C759CF500BCC770 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				2DB0B3201C82E27700B31783 /* ImageProcessing */,
 				2D908E091C75A4A700BCC770 /* SpliceCircleViewController.h */,
 				2D908E0A1C75A4A700BCC770 /* SpliceCircleViewController.m */,
 				2DB1A0201C7722640074A8B5 /* SpliceCircleUI.h */,
@@ -265,11 +269,6 @@
 				2DB1A0231C77227B0074A8B5 /* SpliceCircleUI.xib */,
 				2DB1A01D1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.h */,
 				2DB1A01E1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.m */,
-				2DAECFBB1C7AEE050022EFA1 /* RoundCornerViewController.h */,
-				2DAECFBC1C7AEE050022EFA1 /* RoundCornerViewController.m */,
-				2DB0B3161C82CF6900B31783 /* StretchImageViewController.h */,
-				2DB0B3171C82CF6900B31783 /* StretchImageViewController.m */,
-				2DB0B31B1C82CFF800B31783 /* strectch.png */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -332,6 +331,20 @@
 				2D908DBD1C7556CA00BCC770 /* AppDelegate.m */,
 			);
 			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2DB0B3201C82E27700B31783 /* ImageProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				2DAECFBB1C7AEE050022EFA1 /* RoundCornerViewController.h */,
+				2DAECFBC1C7AEE050022EFA1 /* RoundCornerViewController.m */,
+				2DB0B3161C82CF6900B31783 /* StretchImageViewController.h */,
+				2DB0B3171C82CF6900B31783 /* StretchImageViewController.m */,
+				2DB0B31B1C82CFF800B31783 /* strectch.png */,
+				2DB0B31D1C82E25B00B31783 /* ImageProcessingViewController.h */,
+				2DB0B31E1C82E25B00B31783 /* ImageProcessingViewController.m */,
+			);
+			name = ImageProcessing;
 			sourceTree = "<group>";
 		};
 		8A170C419C57A15B40081053 /* Frameworks */ = {
@@ -537,6 +550,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D768C741C7B4CB7007A98EA /* PickerViewViewController.m in Sources */,
+				2DB0B31F1C82E25B00B31783 /* ImageProcessingViewController.m in Sources */,
 				2D908DF41C75570C00BCC770 /* FourViewController.m in Sources */,
 				2D01767D1C81F848001215EA /* DataSource.m in Sources */,
 				2D908DC11C7556CA00BCC770 /* ViewController.m in Sources */,
