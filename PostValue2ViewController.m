@@ -50,7 +50,9 @@
 }
 
 - (IBAction)KVO:(UIButton *)sender {
-//    self.KVO = self.KVOtextFeild.text;
+    self.KVO = self.KVOtextFeild.text;
+    
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 

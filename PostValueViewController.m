@@ -43,7 +43,11 @@
     
 }
 - (IBAction)delegateNext:(UIButton *)sender {
-    PostValue2ViewController *vc2 = [PostValue2ViewController new];
+    /**
+     initWithNibName : file's owner class是实体类PostValue2ViewController
+                        是延迟加载，这个View上的控件是 nil 的，只有到 需要显示时，才会不是 nil
+     */
+    PostValue2ViewController *vc2 = [[PostValue2ViewController alloc]initWithNibName:@"PostValue2ViewController" bundle:nil];
     //设置代理
     vc2.delegate = self;
     [self.navigationController pushViewController:vc2 animated:YES];
@@ -113,6 +117,7 @@
  *  KVO
  */
 - (void)addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context {
+    
     if ([keyPath isEqualToString:@"KVO"]) {
         [self.KVOLabel setTitle:self.vc.KVO forState:UIControlStateNormal];
     }
@@ -120,7 +125,7 @@
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"notificationCenter" object:nil];
-//    [self.vc removeObserver:self forKeyPath:@"KVO"];
+    [self.vc removeObserver:self forKeyPath:@"KVO"];
     LLog(@"PostValue1 dealloc");
 }
 
