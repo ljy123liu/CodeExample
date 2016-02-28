@@ -9,7 +9,11 @@
 #import "DataSource.h"
 
 @implementation DataSource
-
+/**
+ *  单例
+ *
+ *  @return
+ */
 +(DataSource *)shareDataSource {
     static DataSource *dataSource = nil;
     static dispatch_once_t onceToken;
