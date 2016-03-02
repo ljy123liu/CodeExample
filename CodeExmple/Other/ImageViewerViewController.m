@@ -86,6 +86,10 @@
     self.rightImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld",rightImageIndex]];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+}
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     
     [self reloadImage];

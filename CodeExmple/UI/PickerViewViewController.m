@@ -29,13 +29,13 @@ typedef NS_ENUM(NSInteger,LPickerViewControllerColorComponent) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.pickerView = [[UIPickerView alloc]initWithFrame:CGRectMake(50, 100, 300, 200)];
-    [self.view addSubview:self.pickerView];
-    self.pickerView.showsSelectionIndicator = YES;
-    
-    self.colorSwatchView = [[UIView alloc]initWithFrame:CGRectMake(50, 330, 300, 200)];
-    [self.view addSubview:self.colorSwatchView];
-    [self configurePickerView];
+//    self.pickerView = [[UIPickerView alloc]initWithFrame:CGRectMake(50, 100, 300, 200)];
+//    [self.view addSubview:self.pickerView];
+//    self.pickerView.showsSelectionIndicator = YES;
+//    
+//    self.colorSwatchView = [[UIView alloc]initWithFrame:CGRectMake(50, 330, 300, 200)];
+//    [self.view addSubview:self.colorSwatchView];
+//    [self configurePickerView];
 }
 
 - (void)updateColorSwitchViewBackgroundColor {

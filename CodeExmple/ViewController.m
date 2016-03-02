@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ActivityIndicatorViewController.h"
 #import "AlertControllerViewController.h"
+#import "LPFPSLabel.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSArray *dataArray;
@@ -32,6 +33,9 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:_tableView];
+    
+    LPFPSLabel *fps = [[LPFPSLabel alloc]initWithFrame:CGRectMake(20, SCREEN_SIZE_HEIGHT - 100, 50, 30)];
+    [self.view addSubview:fps];
 }
 
 - (void)dataTitle {
