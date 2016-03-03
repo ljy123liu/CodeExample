@@ -9,6 +9,7 @@
 #import "LYFPSLabelViewController.h"
 #import "LPFPSLabel.h"
 #import "FPSView.h"
+#import "OptimizeRoundCornerViewController.h"
 #import "buttonTableViewCell.h"
 @interface LYFPSLabelViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -23,9 +24,6 @@
     
     [self addUI];
     [self dataTitle];
-
-//    te    st.backgroundColor = [UIColor blueColor];
-//    [self.view addSubview:test];
 }
 
 - (void)addUI {
@@ -36,10 +34,20 @@
     self.tableView.delaysContentTouches = NO;
     [self.view addSubview:_tableView];
     
-//    [self.tableView registerNib:[UINib nibWithNibName:@"cell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"buttonTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    
+    UIButton *rightNavItem = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightNavItem.frame = CGRectMake(0, 0, 40, 40);
+    [rightNavItem setTitle:@"优化" forState:UIControlStateNormal];
+    [rightNavItem setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [rightNavItem addTarget:self action:@selector(rightBarButtonItemClick) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithCustomView:rightNavItem];
+    self.navigationItem.rightBarButtonItem = rightItem;
     
     LPFPSLabel *fps = [[LPFPSLabel alloc]initWithFrame:CGRectMake(20, SCREEN_SIZE_HEIGHT - 100, 50, 30)];
-    [self.view addSubview:fps];
+//    [self.view addSubview:fps];
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [window addSubview:fps];
 }
 
 - (void)dataTitle {
@@ -64,17 +72,9 @@
 //    btn.selected = YES;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-//    NSString *className = self.dataArray[indexPath.row];
-//    Class class = NSClassFromString(className);
-//    if (class) {
-//        UIViewController *ctrl = class.new;
-//        ctrl.title = _dataArray[indexPath.row];
-//        [self.navigationController pushViewController:ctrl animated:YES];
-//    }
-//    //取消返回时候的选中高亮状态
-//    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+- (void)rightBarButtonItemClick {
+    OptimizeRoundCornerViewController *op = [OptimizeRoundCornerViewController new];
+    [self.navigationController pushViewController:op animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -13,7 +13,7 @@
 + (UIImageView *)roundedRectInitWithFrame:(CGRect)frame imageNamed:(NSString *)imageName {
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:frame];
     UIImage *image = [UIImage imageNamed:imageName];
-    UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, NO, 1.0);
+    UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, NO, image.scale);
     [[UIBezierPath bezierPathWithRoundedRect:imageView.bounds cornerRadius:frame.size.width / 2] addClip];
     [image drawInRect:imageView.bounds];
     imageView.image = UIGraphicsGetImageFromCurrentImageContext();

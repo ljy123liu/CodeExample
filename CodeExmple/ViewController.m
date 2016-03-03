@@ -25,6 +25,9 @@
      *  safiri隐藏方式
      */
     self.navigationController.hidesBarsOnSwipe = YES;
+    for (int i = 1; i < 10; i++) {
+        LLog(@"测试log");
+    }
 }
 
 - (void)addUI {
