@@ -57,9 +57,9 @@
 - (IBAction)blockNext:(UIButton *)sender {
     PostValue2ViewController *vc2 = [PostValue2ViewController new];
     //block
-    @weakify(self);
+//    @weakify(self);
     vc2.textBlock = ^(NSString *str){
-        @strongify(self);
+//        @strongify(self);
         [self.blockLabel setTitle:str forState:UIControlStateNormal];
     };
     [self.navigationController pushViewController:vc2 animated:YES];
@@ -127,7 +127,7 @@
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"notificationCenter" object:nil];
     [self.vc removeObserver:self forKeyPath:@"KVO"];
-    LLog(@"PostValue1 dealloc");
+//    LLog(@"PostValue1 dealloc");
 }
 
 - (void)didReceiveMemoryWarning {

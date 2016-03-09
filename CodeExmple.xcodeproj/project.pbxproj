@@ -40,6 +40,7 @@
 		2D908E061C759DE000BCC770 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908E021C759DE000BCC770 /* UIBarButtonItem+Extension.m */; };
 		2D908E071C759DE000BCC770 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908E041C759DE000BCC770 /* UIImage+Extension.m */; };
 		2D908E0B1C75A4A700BCC770 /* SpliceCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908E0A1C75A4A700BCC770 /* SpliceCircleViewController.m */; };
+		2DA94FB41C901DBA0047AF46 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA94FB31C901DBA0047AF46 /* Reveal.framework */; };
 		2DAECFBD1C7AEE050022EFA1 /* RoundCornerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAECFBC1C7AEE050022EFA1 /* RoundCornerViewController.m */; };
 		2DAECFC01C7B0E800022EFA1 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAECFBF1C7B0E800022EFA1 /* DatePickerViewController.m */; };
 		2DB0B3151C82C9BF00B31783 /* UIImageView+RoundRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0B3141C82C9BF00B31783 /* UIImageView+RoundRect.m */; };
@@ -138,6 +139,7 @@
 		2D908E081C759EE300BCC770 /* CodeExamplePCH.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeExamplePCH.pch; sourceTree = "<group>"; };
 		2D908E091C75A4A700BCC770 /* SpliceCircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpliceCircleViewController.h; sourceTree = "<group>"; };
 		2D908E0A1C75A4A700BCC770 /* SpliceCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpliceCircleViewController.m; sourceTree = "<group>"; };
+		2DA94FB31C901DBA0047AF46 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		2DAECFBB1C7AEE050022EFA1 /* RoundCornerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundCornerViewController.h; sourceTree = "<group>"; };
 		2DAECFBC1C7AEE050022EFA1 /* RoundCornerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundCornerViewController.m; sourceTree = "<group>"; };
 		2DAECFBE1C7B0E800022EFA1 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				927EB04BAA61C8804B8435E1 /* libPods.a in Frameworks */,
+				2DA94FB41C901DBA0047AF46 /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +455,7 @@
 		8A170C419C57A15B40081053 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2DA94FB31C901DBA0047AF46 /* Reveal.framework */,
 				EB55230364E4E2858368A7A9 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -834,9 +838,62 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PREFIX_HEADER = /Users/liuyong/Desktop/CodeExample/CodeExmple/CodeExamplePCH.pch;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = "${SRCROOT}/CodeExmple/Supporting Files/CodeExamplePCH.pch";
 				INFOPLIST_FILE = "CodeExmple/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"FMDB\"",
+					"-l\"JSONModel\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MagicalRecord\"",
+					"-l\"Mantle\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-l\"YYKit\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WebP\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.WanJianTechnology.CodeExmple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
@@ -849,9 +906,62 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PREFIX_HEADER = /Users/liuyong/Desktop/CodeExample/CodeExmple/CodeExamplePCH.pch;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = "${SRCROOT}/CodeExmple/Supporting Files/CodeExamplePCH.pch";
 				INFOPLIST_FILE = "CodeExmple/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"FMDB\"",
+					"-l\"JSONModel\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MagicalRecord\"",
+					"-l\"Mantle\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-l\"YYKit\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WebP\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.WanJianTechnology.CodeExmple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
