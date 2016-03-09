@@ -30,4 +30,7 @@
  *  @return <#return value description#>
  */
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
+
+
+- (UIImage *)addCornerRadius:(CGFloat)cornerRadius;
 @end

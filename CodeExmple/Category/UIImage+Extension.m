@@ -62,6 +62,43 @@
     return image;
 }
 
+//添加圆角
+- (UIImage *)addCornerRadius:(CGFloat)cornerRadius {
+    CGFloat scale = [UIScreen mainScreen].scale;
+    
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, scale);
+    
+    CGContextRef c = UIGraphicsGetCurrentContext();
+    CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
+    
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect
+                                                    cornerRadius:cornerRadius];
+    CGContextAddPath(c, path.CGPath);
+    
+    CGContextClip(c);
+    [self drawInRect:rect];
+    CGContextDrawPath(c, kCGPathFillStroke);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
+
+// 非等比缩放
+- (UIImage *)hyb_cropEqualScaleImageToSize:(CGSize)size {
+    CGFloat scale =  [UIScreen mainScreen].scale;
+    
+    UIGraphicsBeginImageContextWithOptions(size, YES, scale);
+    
+    [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
 
 
 

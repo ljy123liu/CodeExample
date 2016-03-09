@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *userDefaultLabel;
 @property (weak, nonatomic) IBOutlet UIButton *singletonLabel;
 @property (weak, nonatomic) IBOutlet UIButton *KVOLabel;
-@property (strong,nonatomic) PostValue2ViewController *vc;
+@property (strong, nonatomic) PostValue2ViewController *vc;
 @end
 
 @implementation PostValueViewController
@@ -24,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"页面传值";
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
