@@ -16,7 +16,7 @@
     button.image = [UIImage imageNamed:@"1"];
     button.layer.cornerRadius = 20;
     button.clipsToBounds = YES;
-
+    
     UIImageView *button2 = [[UIImageView alloc]initWithFrame:CGRectMake(50, 0, 40, 40)];
     button2.image = [UIImage imageNamed:@"2"];
     button2.layer.cornerRadius = 20;
