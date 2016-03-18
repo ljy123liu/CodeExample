@@ -44,7 +44,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    OptimizeRoundCornerTableViewCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"OptimizeRoundCornerTableViewCell" owner:self options:nil] firstObject];
+    OptimizeRoundCornerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"opCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;

@@ -8,6 +8,7 @@
 
 #import "RoundCornerViewController.h"
 #import "UIImageView+RoundRect.h"
+#import "UIImageView+CornerRadius.h"
 @interface RoundCornerViewController ()
 
 @end

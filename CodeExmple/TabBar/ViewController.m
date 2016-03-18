@@ -28,11 +28,12 @@
     for (int i = 1; i < 10; i++) {
         LLog(@"测试log");
     }
+
 }
 
 - (void)addUI {
-    
-    self.tableView = [[UITableView alloc]initWithFrame:self.view.frame];
+
+    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:_tableView];

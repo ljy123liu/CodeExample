@@ -48,6 +48,10 @@
 ////    [self.view addSubview:fps];
 //    UIWindow *window = [UIApplication sharedApplication].keyWindow;
 //    [window addSubview:fps];
+    
+    LPFPSLabel *fps = [[LPFPSLabel alloc]initWithFrame:CGRectMake(20, SCREEN_SIZE_HEIGHT - 100, 50, 30)];
+    [self.view addSubview:fps];
+
 }
 
 - (void)dataTitle {
@@ -63,7 +67,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    buttonTableViewCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"buttonTableViewCell" owner:self options:nil] firstObject];
+    buttonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     return cell;

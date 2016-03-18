@@ -7,6 +7,7 @@
 //
 
 #import "StretchImageViewController.h"
+
 @interface StretchImageViewController ()
 @property (strong, nonatomic) UIImageView *normalImageView;
 @property (strong, nonatomic) UIImageView *strectchImageView;

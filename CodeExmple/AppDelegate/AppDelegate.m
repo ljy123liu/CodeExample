@@ -21,9 +21,9 @@
     [self.window makeKeyAndVisible];
     TabBarViewController *tabBar = [TabBarViewController new];
     self.window.rootViewController = tabBar;
-    
-    LPFPSLabel *fps = [[LPFPSLabel alloc]initWithFrame:CGRectMake(20, SCREEN_SIZE_HEIGHT - 100, 50, 30)];
-    [self.window addSubview:fps];
+//    
+//    LPFPSLabel *fps = [[LPFPSLabel alloc]initWithFrame:CGRectMake(20, SCREEN_SIZE_HEIGHT - 100, 50, 30)];
+//    [self.window addSubview:fps];
     return YES;
 }
 

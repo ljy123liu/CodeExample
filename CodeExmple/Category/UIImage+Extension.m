@@ -87,7 +87,7 @@
 
 
 // 非等比缩放
-- (UIImage *)hyb_cropEqualScaleImageToSize:(CGSize)size {
+- (UIImage *)unequalScaleImageToSize:(CGSize)size {
     CGFloat scale =  [UIScreen mainScreen].scale;
     
     UIGraphicsBeginImageContextWithOptions(size, YES, scale);
@@ -97,6 +97,56 @@
     UIGraphicsEndImageContext();
     
     return image;
+}
+
+#pragma mark - 等比缩放截取图片
++ (UIImage *)scaleImage:(UIImage *)image toScale:(CGSize)reSize
+{
+    reSize = CGSizeMake(reSize.width*2.0, reSize.height*2.0);
+    //先按要显示的大小去比例缩放下图片
+    UIImage *scaledImage = [self zoomImage:image toScale:reSize];
+    
+    //计算截取位置。这里我们考虑一般拍照边界位置可能存在全白或全黑的情况，多数重要的会在中间位置。所以计算下截取是重绘图片的中间位置
+    float drawW = 0.0;
+    float drawH = 0.0;
+    
+    CGSize size_new = scaledImage.size;
+    
+    if (size_new.width > reSize.width) {
+        drawW = (size_new.width - reSize.width)/2.0;
+    }
+    if (size_new.height > reSize.height) {
+        drawH = (size_new.height - reSize.height)/2.0;
+    }
+    
+    //截取截取大小为需要显示的大小。取图片中间位置截取
+    CGRect myImageRect = CGRectMake(drawW, drawH, reSize.width, reSize.height);
+    UIImage* bigImage= scaledImage;
+    scaledImage = nil;
+    CGImageRef imageRef = bigImage.CGImage;
+    CGImageRef subImageRef = CGImageCreateWithImageInRect(imageRef, myImageRect);
+    
+    UIGraphicsBeginImageContext(reSize);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextDrawImage(context, myImageRect, subImageRef);
+    UIImage* smallImage = [UIImage imageWithCGImage:subImageRef];
+    UIGraphicsEndImageContext();
+    CGImageRelease(subImageRef);
+    return smallImage;
+}
+
++ (UIImage *)zoomImage:(UIImage *)image toScale:(CGSize)reSize
+{
+    //根据要显示的大小等比例算出缩放后的图片大小
+    CGSize size_new = CGSizeMake(reSize.width, image.size.height/image.size.width*reSize.width);
+    
+    //绘制这个大小的图片
+    UIGraphicsBeginImageContext(size_new);
+    [image drawInRect:CGRectMake(0,0, size_new.width, size_new.height)];
+    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return scaledImage;
 }
 
 

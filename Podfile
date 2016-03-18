@@ -9,3 +9,4 @@ pod 'YYKit', '~> 0.9.11'
 pod 'Masonry', '~> 0.6.4'
 pod 'MagicalRecord', '~> 2.3.2'
 pod 'FMDB', '~> 2.6'
+
