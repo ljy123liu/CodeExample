@@ -21,15 +21,15 @@
     return imageView;
 }
 
-//+ (UIImageView *)roundedRectWithImageView:(UIImageView *)imageView imageNamed:(NSString *)imageName cornerRadius:(CGFloat)cornerRadius {
-//    
-//    UIImage *image = [UIImage imageNamed:imageName];
-//    UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, NO, 1.0);
-//    [[UIBezierPath bezierPathWithRoundedRect:imageView.bounds cornerRadius:cornerRadius] addClip];
-//    [image drawInRect:imageView.bounds];
-//    imageView.image = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
-//    return imageView;
-//}
++ (UIImageView *)roundedRectWithImageView:(UIImageView *)imageView imageNamed:(NSString *)imageName cornerRadius:(CGFloat)cornerRadius {
+    
+    UIImage *image = [UIImage imageNamed:imageName];
+    UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, NO, 1.0);
+    [[UIBezierPath bezierPathWithRoundedRect:imageView.bounds cornerRadius:cornerRadius] addClip];
+    [image drawInRect:imageView.bounds];
+    imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return imageView;
+}
 
 @end

@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.title = @"clipToBounds切圆角";
     [self addUI];
     [self dataTitle];
 }
@@ -49,8 +49,8 @@
 //    UIWindow *window = [UIApplication sharedApplication].keyWindow;
 //    [window addSubview:fps];
     
-    LPFPSLabel *fps = [[LPFPSLabel alloc]initWithFrame:CGRectMake(20, SCREEN_SIZE_HEIGHT - 100, 50, 30)];
-    [self.view addSubview:fps];
+//    LPFPSLabel *fps = [[LPFPSLabel alloc]initWithFrame:CGRectMake(20, SCREEN_SIZE_HEIGHT - 100, 50, 30)];
+//    [self.view addSubview:fps];
 
 }
 

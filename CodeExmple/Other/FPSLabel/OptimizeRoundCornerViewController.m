@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.title = @"切圆角优化";
     [self addUI];
 }
 
@@ -33,8 +33,8 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"OptimizeRoundCornerTableViewCell" bundle:nil] forCellReuseIdentifier:@"opCell"];
     
-    LPFPSLabel *fps = [[LPFPSLabel alloc]initWithFrame:CGRectMake(20, SCREEN_SIZE_HEIGHT - 100, 50, 30)];
-    [self.view addSubview:fps];
+//    LPFPSLabel *fps = [[LPFPSLabel alloc]initWithFrame:CGRectMake(20, SCREEN_SIZE_HEIGHT - 100, 50, 30)];
+//    [self.view addSubview:fps];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
