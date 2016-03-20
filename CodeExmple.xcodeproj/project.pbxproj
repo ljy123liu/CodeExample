@@ -22,6 +22,8 @@
 		2D25FFC21C85C2C1007BAE7F /* LYFPSLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D25FFC11C85C2C1007BAE7F /* LYFPSLabelViewController.m */; };
 		2D25FFC51C85C367007BAE7F /* FPSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D25FFC41C85C367007BAE7F /* FPSView.m */; };
 		2D25FFC71C85C378007BAE7F /* FPSView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D25FFC61C85C378007BAE7F /* FPSView.xib */; };
+		2D6FFA131C9EE04F00F086F8 /* ThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FFA121C9EE04F00F086F8 /* ThreadViewController.m */; };
+		2D6FFA161C9EEA0800F086F8 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FFA151C9EEA0800F086F8 /* AccountManager.m */; };
 		2D7456621C9B9AB00040AA74 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D74559F1C9B9AAF0040AA74 /* 11.png */; };
 		2D7456651C9B9AB00040AA74 /* 13.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7455A21C9B9AAF0040AA74 /* 13.png */; };
 		2D7456671C9B9AB00040AA74 /* 14.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7455A41C9B9AAF0040AA74 /* 14.png */; };
@@ -47,6 +49,7 @@
 		2D908E061C759DE000BCC770 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908E021C759DE000BCC770 /* UIBarButtonItem+Extension.m */; };
 		2D908E071C759DE000BCC770 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908E041C759DE000BCC770 /* UIImage+Extension.m */; };
 		2D908E0B1C75A4A700BCC770 /* SpliceCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908E0A1C75A4A700BCC770 /* SpliceCircleViewController.m */; };
+		2D90B16E1C9BDC9C008017F3 /* alpha.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D90B16D1C9BDC9C008017F3 /* alpha.png */; };
 		2DA94FB41C901DBA0047AF46 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA94FB31C901DBA0047AF46 /* Reveal.framework */; };
 		2DAECFBD1C7AEE050022EFA1 /* RoundCornerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAECFBC1C7AEE050022EFA1 /* RoundCornerViewController.m */; };
 		2DAECFC01C7B0E800022EFA1 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAECFBF1C7B0E800022EFA1 /* DatePickerViewController.m */; };
@@ -110,6 +113,10 @@
 		2D25FFC31C85C367007BAE7F /* FPSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPSView.h; sourceTree = "<group>"; };
 		2D25FFC41C85C367007BAE7F /* FPSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPSView.m; sourceTree = "<group>"; };
 		2D25FFC61C85C378007BAE7F /* FPSView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FPSView.xib; sourceTree = "<group>"; };
+		2D6FFA111C9EE04F00F086F8 /* ThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadViewController.h; path = CodeExmple/Code/ThreadViewController.h; sourceTree = SOURCE_ROOT; };
+		2D6FFA121C9EE04F00F086F8 /* ThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThreadViewController.m; path = CodeExmple/Code/ThreadViewController.m; sourceTree = SOURCE_ROOT; };
+		2D6FFA141C9EEA0800F086F8 /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountManager.h; path = CodeExmple/Code/AccountManager.h; sourceTree = SOURCE_ROOT; };
+		2D6FFA151C9EEA0800F086F8 /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountManager.m; path = CodeExmple/Code/AccountManager.m; sourceTree = SOURCE_ROOT; };
 		2D74559F1C9B9AAF0040AA74 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
 		2D7455A21C9B9AAF0040AA74 /* 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13.png; sourceTree = "<group>"; };
 		2D7455A41C9B9AAF0040AA74 /* 14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 14.png; sourceTree = "<group>"; };
@@ -153,6 +160,7 @@
 		2D908E081C759EE300BCC770 /* CodeExamplePCH.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeExamplePCH.pch; sourceTree = "<group>"; };
 		2D908E091C75A4A700BCC770 /* SpliceCircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpliceCircleViewController.h; sourceTree = "<group>"; };
 		2D908E0A1C75A4A700BCC770 /* SpliceCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpliceCircleViewController.m; sourceTree = "<group>"; };
+		2D90B16D1C9BDC9C008017F3 /* alpha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alpha.png; sourceTree = "<group>"; };
 		2DA94FB31C901DBA0047AF46 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		2DAECFBB1C7AEE050022EFA1 /* RoundCornerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundCornerViewController.h; sourceTree = "<group>"; };
 		2DAECFBC1C7AEE050022EFA1 /* RoundCornerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundCornerViewController.m; sourceTree = "<group>"; };
@@ -266,6 +274,7 @@
 		2D74559E1C9B9AAF0040AA74 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				2D90B16D1C9BDC9C008017F3 /* alpha.png */,
 				2D74559F1C9B9AAF0040AA74 /* 11.png */,
 				2D7455A21C9B9AAF0040AA74 /* 13.png */,
 				2D7455A41C9B9AAF0040AA74 /* 14.png */,
@@ -421,10 +430,10 @@
 		2D908E0C1C75BBD400BCC770 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				2D908DF21C75570C00BCC770 /* FourViewController.h */,
-				2D908DF31C75570C00BCC770 /* FourViewController.m */,
 				2D908DF51C7557DB00BCC770 /* TabBarViewController.h */,
 				2D908DF61C7557DB00BCC770 /* TabBarViewController.m */,
+				2D908DF21C75570C00BCC770 /* FourViewController.h */,
+				2D908DF31C75570C00BCC770 /* FourViewController.m */,
 				2D908DEF1C75570200BCC770 /* ThreeViewController.h */,
 				2D908DF01C75570200BCC770 /* ThreeViewController.m */,
 				2D908DEC1C7556FB00BCC770 /* TwoViewController.h */,
@@ -447,16 +456,12 @@
 		2DA94FAD1C8D12870047AF46 /* Thread */ = {
 			isa = PBXGroup;
 			children = (
-				2DA94FB01C9002A30047AF46 /* GCD */,
+				2D6FFA111C9EE04F00F086F8 /* ThreadViewController.h */,
+				2D6FFA121C9EE04F00F086F8 /* ThreadViewController.m */,
+				2D6FFA141C9EEA0800F086F8 /* AccountManager.h */,
+				2D6FFA151C9EEA0800F086F8 /* AccountManager.m */,
 			);
 			path = Thread;
-			sourceTree = "<group>";
-		};
-		2DA94FB01C9002A30047AF46 /* GCD */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = GCD;
 			sourceTree = "<group>";
 		};
 		2DB0B3201C82E27700B31783 /* ImageProcessing */ = {
@@ -624,6 +629,7 @@
 				2DC513971C892AE200972A32 /* MBProgressHUDViewController.xib in Resources */,
 				2DB1A0241C77227B0074A8B5 /* SpliceCircleUI.xib in Resources */,
 				2D25FFC71C85C378007BAE7F /* FPSView.xib in Resources */,
+				2D90B16E1C9BDC9C008017F3 /* alpha.png in Resources */,
 				2DB0B31C1C82CFF800B31783 /* strectch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -704,6 +710,7 @@
 				2D908DF41C75570C00BCC770 /* FourViewController.m in Sources */,
 				2DB0B3241C82EF3300B31783 /* ImageViewerViewController.m in Sources */,
 				2D01767D1C81F848001215EA /* DataSource.m in Sources */,
+				2D6FFA131C9EE04F00F086F8 /* ThreadViewController.m in Sources */,
 				2D908DC11C7556CA00BCC770 /* ViewController.m in Sources */,
 				2D908DF71C7557DB00BCC770 /* TabBarViewController.m in Sources */,
 				2D0176791C80A81A001215EA /* PostValueViewController.m in Sources */,
@@ -731,6 +738,7 @@
 				2DAECFC01C7B0E800022EFA1 /* DatePickerViewController.m in Sources */,
 				2DC513961C892AE200972A32 /* MBProgressHUDViewController.m in Sources */,
 				2D908DF11C75570200BCC770 /* ThreeViewController.m in Sources */,
+				2D6FFA161C9EEA0800F086F8 /* AccountManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

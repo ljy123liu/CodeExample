@@ -11,6 +11,7 @@
 #import "FPSView.h"
 #import "OptimizeRoundCornerViewController.h"
 #import "buttonTableViewCell.h"
+#import "MBProgressHUD.h"
 @interface LYFPSLabelViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataArray;
@@ -24,6 +25,16 @@
     self.title = @"clipToBounds切圆角";
     [self addUI];
     [self dataTitle];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    __weak typeof(self) weakSelf = self;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+    });
 }
 
 - (void)addUI {
