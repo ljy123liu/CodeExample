@@ -31,7 +31,7 @@
 
 - (void)dataTitle {
     self.dataArray = [NSArray array];
-    self.dataArray = @[@"PostValueViewController",@"ThreadViewController"];
+    self.dataArray = @[@"PostValueViewController",@"ThreadViewController",@"CoreAnimationViewController",@"CoreGraphicsViewController"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
