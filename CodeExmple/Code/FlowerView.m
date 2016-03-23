@@ -18,6 +18,11 @@
 }
 */
 
+/**
+*  transforms 变形
+*
+*  @param rect <#rect description#>
+*/
 - (void)drawRect:(CGRect)rect {
     CGSize size = self.bounds.size;
     CGFloat margin = 10;

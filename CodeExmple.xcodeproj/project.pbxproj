@@ -65,6 +65,7 @@
 		2DB1A01F1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1A01E1C76C6AC0074A8B5 /* HideNavBarAndTabBarViewController.m */; };
 		2DB1A0221C7722640074A8B5 /* SpliceCircleUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1A0211C7722640074A8B5 /* SpliceCircleUI.m */; };
 		2DB1A0241C77227B0074A8B5 /* SpliceCircleUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB1A0231C77227B0074A8B5 /* SpliceCircleUI.xib */; };
+		2DC03C7E1CA03EBC000B1CDD /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03C7D1CA03EBC000B1CDD /* GraphView.m */; };
 		2DC195271C83EB7A00C9F3EF /* UIImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC195261C83EB7A00C9F3EF /* UIImage.xcassets */; };
 		2DC513961C892AE200972A32 /* MBProgressHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC513941C892AE200972A32 /* MBProgressHUDViewController.m */; };
 		2DC513971C892AE200972A32 /* MBProgressHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC513951C892AE200972A32 /* MBProgressHUDViewController.xib */; };
@@ -192,6 +193,8 @@
 		2DB1A0201C7722640074A8B5 /* SpliceCircleUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpliceCircleUI.h; sourceTree = "<group>"; };
 		2DB1A0211C7722640074A8B5 /* SpliceCircleUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpliceCircleUI.m; sourceTree = "<group>"; };
 		2DB1A0231C77227B0074A8B5 /* SpliceCircleUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpliceCircleUI.xib; sourceTree = "<group>"; };
+		2DC03C7C1CA03EBC000B1CDD /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
+		2DC03C7D1CA03EBC000B1CDD /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
 		2DC195261C83EB7A00C9F3EF /* UIImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UIImage.xcassets; sourceTree = "<group>"; };
 		2DC513931C892AE200972A32 /* MBProgressHUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUDViewController.h; sourceTree = "<group>"; };
 		2DC513941C892AE200972A32 /* MBProgressHUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUDViewController.m; sourceTree = "<group>"; };
@@ -317,6 +320,8 @@
 				2D6FFA231C9F049E00F086F8 /* DrawRectView.m */,
 				2D6FFA251C9F083700F086F8 /* FlowerView.h */,
 				2D6FFA261C9F083700F086F8 /* FlowerView.m */,
+				2DC03C7C1CA03EBC000B1CDD /* GraphView.h */,
+				2DC03C7D1CA03EBC000B1CDD /* GraphView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -773,6 +778,7 @@
 				2DEE82011C79F15F0041CB11 /* AlertControllerViewController.m in Sources */,
 				2D908E061C759DE000BCC770 /* UIBarButtonItem+Extension.m in Sources */,
 				2D908DBB1C7556CA00BCC770 /* main.m in Sources */,
+				2DC03C7E1CA03EBC000B1CDD /* GraphView.m in Sources */,
 				2D6FFA1F1C9EFF2F00F086F8 /* CoreGraphicsViewController.m in Sources */,
 				2DB1A0221C7722640074A8B5 /* SpliceCircleUI.m in Sources */,
 				2D908E051C759DE000BCC770 /* Foundation+Log.m in Sources */,
