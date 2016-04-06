@@ -10,9 +10,10 @@
 #import "ActivityIndicatorViewController.h"
 #import "AlertControllerViewController.h"
 #import "LPFPSLabel.h"
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic,strong)UITableView *tableView;
-@property (nonatomic,strong)NSArray *dataArray;
+@interface ViewController () <UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *dataArray;
+@property (nonatomic, strong) UILabel *testLable;
 @end
 
 @implementation ViewController
@@ -25,9 +26,22 @@
      *  safiri隐藏方式
      */
     self.navigationController.hidesBarsOnSwipe = YES;
-    for (int i = 1; i < 10; i++) {
-        LLog(@"测试log");
-    }
+//    for (int i = 1; i < 10; i++) {
+//        LLog(@"测试log");
+//    }
+//    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+//    button.backgroundColor = [UIColor blueColor];
+//    [self.view addSubview:button];
+//    [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    self.testLable = [[UILabel alloc] initWithFrame:CGRectMake(100, 300, 100, 20)];
+//    self.testLable.text = @"12345";
+//    self.testLable.backgroundColor = [UIColor lightGrayColor];
+//    [self.view addSubview:self.testLable];
+}
+
+- (void)buttonClick {
+    self.testLable.text = @"放假克拉的风景";
 
 }
 

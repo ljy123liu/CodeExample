@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"传值";
+    
 }
 
 - (IBAction)notificationCenterStyle:(UIButton *)sender {

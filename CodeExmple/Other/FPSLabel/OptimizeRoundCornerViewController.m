@@ -11,7 +11,7 @@
 #import "OptimizeRoundCornerTableViewCell.h"
 @interface OptimizeRoundCornerViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
-
+@property (nonatomic, strong) UIView *alphaView;
 @end
 
 @implementation OptimizeRoundCornerViewController
@@ -21,7 +21,22 @@
     // Do any additional setup after loading the view.
     self.title = @"切圆角优化";
     [self addUI];
+    [self configureNavBar];
 }
+
+- (void)configureNavBar {
+    //导航栏透明
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsCompact];
+    //导航栏细线透明
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    
+    CGRect frame = self.navigationController.navigationBar.frame;
+    self.alphaView = [[UIView alloc] initWithFrame:CGRectMake(0, -20, frame.size.width, frame.size.height+20)];
+    self.alphaView.backgroundColor = [UIColor blueColor];
+    self.alphaView.userInteractionEnabled = NO;
+    [self.navigationController.navigationBar insertSubview: self.alphaView atIndex:0];
+}
+
 
 - (void)addUI {
     
@@ -48,6 +63,10 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@"%f",self.tableView.frame.origin.y);
 }
 
 /*

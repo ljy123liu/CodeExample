@@ -11,7 +11,7 @@
 @implementation AccountManager
 //load：其它类导入本类的头文件时调用（一次）
 + (void)load {
-    NSLog(@"AccountManager load");
+//    NSLog(@"AccountManager load");
 }
 
 //initialize:初始化对象的时候调用一次

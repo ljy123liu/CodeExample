@@ -7,19 +7,31 @@
 //
 
 #import "DataSource.h"
-
+static DataSource *dataSource;
 @implementation DataSource
++ (DataSource *)shareDataSource {
+    @synchronized(self) {
+        
+    }
+    if (!dataSource) {
+//        dataSource = [[DataSource allocWithZone:NULL] init];
+        dataSource = [[super alloc] init];
+    }
+    return dataSource;
+}
 /**
  *  单例
  *
  *  @return
  */
-+(DataSource *)shareDataSource {
-    static DataSource *dataSource = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        dataSource = [DataSource new];
-    });
-    return dataSource;
-}
+//+(DataSource *)shareDataSource {
+//    
+//    static DataSource *dataSource = nil;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        dataSource = [DataSource new];
+//    });
+//    return dataSource;
+//}
+
 @end

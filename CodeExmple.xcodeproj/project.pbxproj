@@ -36,6 +36,8 @@
 		2D74566D1C9B9AB00040AA74 /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7455AA1C9B9AAF0040AA74 /* 12.png */; };
 		2D74566E1C9B9AB00040AA74 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7455AB1C9B9AAF0040AA74 /* 10.png */; };
 		2D768C741C7B4CB7007A98EA /* PickerViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D768C731C7B4CB7007A98EA /* PickerViewViewController.m */; };
+		2D80DA0D1CAFDF6100CB3E18 /* SScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D80DA0B1CAFDF6100CB3E18 /* SScrollView.m */; };
+		2D80DA111CB392EA00CB3E18 /* SScrollViewViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D80DA101CB392EA00CB3E18 /* SScrollViewViewContoller.m */; };
 		2D908DBB1C7556CA00BCC770 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908DBA1C7556CA00BCC770 /* main.m */; };
 		2D908DBE1C7556CA00BCC770 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908DBD1C7556CA00BCC770 /* AppDelegate.m */; };
 		2D908DC11C7556CA00BCC770 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908DC01C7556CA00BCC770 /* ViewController.m */; };
@@ -67,8 +69,6 @@
 		2DB1A0241C77227B0074A8B5 /* SpliceCircleUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB1A0231C77227B0074A8B5 /* SpliceCircleUI.xib */; };
 		2DC03C7E1CA03EBC000B1CDD /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC03C7D1CA03EBC000B1CDD /* GraphView.m */; };
 		2DC195271C83EB7A00C9F3EF /* UIImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC195261C83EB7A00C9F3EF /* UIImage.xcassets */; };
-		2DC513961C892AE200972A32 /* MBProgressHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC513941C892AE200972A32 /* MBProgressHUDViewController.m */; };
-		2DC513971C892AE200972A32 /* MBProgressHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC513951C892AE200972A32 /* MBProgressHUDViewController.xib */; };
 		2DEE81FE1C79E0170041CB11 /* ActivityIndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEE81FD1C79E0170041CB11 /* ActivityIndicatorViewController.m */; };
 		2DEE82011C79F15F0041CB11 /* AlertControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEE82001C79F15F0041CB11 /* AlertControllerViewController.m */; };
 		927EB04BAA61C8804B8435E1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB55230364E4E2858368A7A9 /* libPods.a */; };
@@ -139,6 +139,10 @@
 		2D7455AB1C9B9AAF0040AA74 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
 		2D768C721C7B4CB7007A98EA /* PickerViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewViewController.h; sourceTree = "<group>"; };
 		2D768C731C7B4CB7007A98EA /* PickerViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewViewController.m; sourceTree = "<group>"; };
+		2D80DA0B1CAFDF6100CB3E18 /* SScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SScrollView.m; path = ../Lib/SScrollView.m; sourceTree = "<group>"; };
+		2D80DA0C1CAFDF6100CB3E18 /* SScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SScrollView.h; path = ../Lib/SScrollView.h; sourceTree = "<group>"; };
+		2D80DA0F1CB392EA00CB3E18 /* SScrollViewViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SScrollViewViewContoller.h; sourceTree = "<group>"; };
+		2D80DA101CB392EA00CB3E18 /* SScrollViewViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SScrollViewViewContoller.m; sourceTree = "<group>"; };
 		2D908DB61C7556CA00BCC770 /* CodeExmple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeExmple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D908DBA1C7556CA00BCC770 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2D908DBC1C7556CA00BCC770 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -196,9 +200,6 @@
 		2DC03C7C1CA03EBC000B1CDD /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
 		2DC03C7D1CA03EBC000B1CDD /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
 		2DC195261C83EB7A00C9F3EF /* UIImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UIImage.xcassets; sourceTree = "<group>"; };
-		2DC513931C892AE200972A32 /* MBProgressHUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUDViewController.h; sourceTree = "<group>"; };
-		2DC513941C892AE200972A32 /* MBProgressHUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUDViewController.m; sourceTree = "<group>"; };
-		2DC513951C892AE200972A32 /* MBProgressHUDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBProgressHUDViewController.xib; sourceTree = "<group>"; };
 		2DEE81FC1C79E0170041CB11 /* ActivityIndicatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityIndicatorViewController.h; sourceTree = "<group>"; };
 		2DEE81FD1C79E0170041CB11 /* ActivityIndicatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityIndicatorViewController.m; sourceTree = "<group>"; };
 		2DEE81FF1C79F15F0041CB11 /* AlertControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertControllerViewController.h; sourceTree = "<group>"; };
@@ -252,6 +253,7 @@
 		2D25FFBA1C8597FE007BAE7F /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				2D80DA0E1CB3926700CB3E18 /* SScrollView */,
 				2D25FFBB1C859817007BAE7F /* FPSLabel */,
 			);
 			path = Vender;
@@ -339,7 +341,23 @@
 				2D7455AB1C9B9AAF0040AA74 /* 10.png */,
 			);
 			name = icons;
-			path = ../icons;
+			path = ../../icons;
+			sourceTree = "<group>";
+		};
+		2D80DA0A1CAFDD8600CB3E18 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		2D80DA0E1CB3926700CB3E18 /* SScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				2D80DA0C1CAFDF6100CB3E18 /* SScrollView.h */,
+				2D80DA0B1CAFDF6100CB3E18 /* SScrollView.m */,
+			);
+			name = SScrollView;
 			sourceTree = "<group>";
 		};
 		2D908DAD1C7556CA00BCC770 = {
@@ -368,15 +386,15 @@
 			isa = PBXGroup;
 			children = (
 				2D908E0D1C75BC0000BCC770 /* AppDelegate */,
-				2D908DFC1C759D4500BCC770 /* Category */,
-				2D908DF81C759CF500BCC770 /* Code */,
-				2D908DF91C759CF500BCC770 /* Lib */,
 				2D908DFA1C759CF500BCC770 /* Other */,
+				2D908DF91C759CF500BCC770 /* Lib */,
+				2D908DF81C759CF500BCC770 /* Code */,
+				2D908DFB1C759CF500BCC770 /* UI */,
+				2D80DA0A1CAFDD8600CB3E18 /* Util */,
+				2D908DFC1C759D4500BCC770 /* Category */,
 				2D908DB91C7556CA00BCC770 /* Supporting Files */,
 				2D908E0C1C75BBD400BCC770 /* TabBar */,
-				2D908DFB1C759CF500BCC770 /* UI */,
 				2D25FFBA1C8597FE007BAE7F /* Vender */,
-				2D74559E1C9B9AAF0040AA74 /* icons */,
 			);
 			path = CodeExmple;
 			sourceTree = "<group>";
@@ -384,6 +402,7 @@
 		2D908DB91C7556CA00BCC770 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2D74559E1C9B9AAF0040AA74 /* icons */,
 				2D908DC51C7556CA00BCC770 /* Assets.xcassets */,
 				2D908E081C759EE300BCC770 /* CodeExamplePCH.pch */,
 				2D908DCA1C7556CA00BCC770 /* Info.plist */,
@@ -427,9 +446,8 @@
 		2D908DF91C759CF500BCC770 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				2DC513931C892AE200972A32 /* MBProgressHUDViewController.h */,
-				2DC513941C892AE200972A32 /* MBProgressHUDViewController.m */,
-				2DC513951C892AE200972A32 /* MBProgressHUDViewController.xib */,
+				2D80DA0F1CB392EA00CB3E18 /* SScrollViewViewContoller.h */,
+				2D80DA101CB392EA00CB3E18 /* SScrollViewViewContoller.m */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -683,7 +701,6 @@
 				2D25EC441C85CE6000E95C76 /* buttonTableViewCell.xib in Resources */,
 				2D74566D1C9B9AB00040AA74 /* 12.png in Resources */,
 				2DC195271C83EB7A00C9F3EF /* UIImage.xcassets in Resources */,
-				2DC513971C892AE200972A32 /* MBProgressHUDViewController.xib in Resources */,
 				2DB1A0241C77227B0074A8B5 /* SpliceCircleUI.xib in Resources */,
 				2D25FFC71C85C378007BAE7F /* FPSView.xib in Resources */,
 				2D90B16E1C9BDC9C008017F3 /* alpha.png in Resources */,
@@ -781,8 +798,10 @@
 				2DC03C7E1CA03EBC000B1CDD /* GraphView.m in Sources */,
 				2D6FFA1F1C9EFF2F00F086F8 /* CoreGraphicsViewController.m in Sources */,
 				2DB1A0221C7722640074A8B5 /* SpliceCircleUI.m in Sources */,
+				2D80DA111CB392EA00CB3E18 /* SScrollViewViewContoller.m in Sources */,
 				2D908E051C759DE000BCC770 /* Foundation+Log.m in Sources */,
 				2DEE81FE1C79E0170041CB11 /* ActivityIndicatorViewController.m in Sources */,
+				2D80DA0D1CAFDF6100CB3E18 /* SScrollView.m in Sources */,
 				2DAECFBD1C7AEE050022EFA1 /* RoundCornerViewController.m in Sources */,
 				2D153E441C86826C003560F7 /* OptimizeRoundCornerTableViewCell.m in Sources */,
 				2D6FFA241C9F049E00F086F8 /* DrawRectView.m in Sources */,
@@ -798,7 +817,6 @@
 				2D908E071C759DE000BCC770 /* UIImage+Extension.m in Sources */,
 				2D0176741C80A805001215EA /* PostValue2ViewController.m in Sources */,
 				2DAECFC01C7B0E800022EFA1 /* DatePickerViewController.m in Sources */,
-				2DC513961C892AE200972A32 /* MBProgressHUDViewController.m in Sources */,
 				2D908DF11C75570200BCC770 /* ThreeViewController.m in Sources */,
 				2D6FFA161C9EEA0800F086F8 /* AccountManager.m in Sources */,
 			);
@@ -887,6 +905,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1079,6 +1098,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = CodeExmpleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.WanJianTechnology.CodeExmpleTests;
@@ -1102,6 +1122,7 @@
 		2D908DEA1C7556CA00BCC770 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = CodeExmpleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.WanJianTechnology.CodeExmpleUITests;

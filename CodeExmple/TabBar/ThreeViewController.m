@@ -31,7 +31,7 @@
 
 - (void)dataTitle {
     self.dataArray = [NSArray array];
-    self.dataArray = @[@"MBProgressHUDViewController"];
+    self.dataArray = @[@"SScrollViewViewContoller",@"ActivityIndicatorViewController"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -55,7 +55,8 @@
     NSString *className = self.dataArray[indexPath.row];
     Class class = NSClassFromString(className);
     if (class) {
-        UIViewController *ctrl = [[class alloc]initWithNibName:className bundle:nil];
+//        UIViewController *ctrl = [[class alloc]initWithNibName:className bundle:nil];
+        UIViewController *ctrl = [class new];
         ctrl.title = _dataArray[indexPath.row];
         [self.navigationController pushViewController:ctrl animated:YES];
     }

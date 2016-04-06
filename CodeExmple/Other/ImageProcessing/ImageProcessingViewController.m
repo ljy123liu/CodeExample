@@ -21,11 +21,6 @@
     // Do any additional setup after loading the view.
     self.title = @"图片处理";
     
-    //导航栏透明
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsCompact];
-    //导航栏细线透明
-    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
-    
     [self addUI];
     [self dataTitle];
 }

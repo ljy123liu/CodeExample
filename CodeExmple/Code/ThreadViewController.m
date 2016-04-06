@@ -5,6 +5,28 @@
 //  Created by LIUYONG on 3/20/16.
 //  Copyright © 2016 WanJianTechnology. All rights reserved.
 //
+/**
+ *  基本概念
+ *  1.进程和线程
+ *  进程：(1）每一个运行的程序都占用一个系统进程（一个app）;（2）一个进程包含N个线程;(3)进程主要是存放数据、以及内部子线程的容器
+ *  线程：(1) 一个线程就是在进程的一个执行代码的路径;（2）线程主要是做具体事情的
+ */
+
+/**
+ *  Serial vs Concurrent 串行 vs 并发
+ *  串行就是每次只有一个任务被执行，既所有任务都放在一条线上，顺序执行。并发就是在同一时间可以有多个任务被执行。
+ */
+
+/**
+ *  Synchronous vs. Asynchronous 同步 vs. 异步
+ *  同步函数只在完成了它预定的任务后才返回，等待操作完成后再继续执行下一个任务，会阻塞主线程。
+ 异步函数，刚好相反，会立即返回，预定的任务会完成但不会等它完成。因此，一个异步函数不会阻塞当前线程，去执行下一个函数。
+ */
+
+/**
+ *  队列 vs 线程
+ *  队列：串行队列 ＋ 并发队列
+ */
 
 #import "ThreadViewController.h"
 #import "AccountManager.h"
@@ -13,17 +35,21 @@
 @end
 
 @implementation ThreadViewController
-
+#pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"多线程";
+    self.navigationItem.title = @"多线程";
     self.view.backgroundColor = [UIColor whiteColor];
     /**
      *  NSThread
      */
     [self NSThreadClassMethod];
     [self NSThreadInstanceMethod];
-    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - NSThread
@@ -80,17 +106,6 @@
 
 #pragma mark - GCD
 /**
- *  Serial vs Concurrent 串行 vs 并发
- *  任务串行执行就是每次只有一个任务被执行，任务并发执行就是在同一时间可以有多个任务被执行。
- */
-
-/**
- *  Synchronous vs. Asynchronous 同步 vs. 异步
- *  一个同步函数只在完成了它预定的任务后才返回。
-    一个异步函数，刚好相反，会立即返回，预定的任务会完成但不会等它完成。因此，一个异步函数不会阻塞当前线程去执行下一个函数。
- */
-
-/**
  *  单例
  */
 + (AccountManager *)shareManager {
@@ -101,10 +116,7 @@
     });
     return manager;
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 /*
 #pragma mark - Navigation

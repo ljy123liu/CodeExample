@@ -194,7 +194,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 
 		// Transparent background
 		self.opaque = NO;
-		self.backgroundColor = [UIColor yellowColor];//FIXME:MBProgressHUD修改
+		self.backgroundColor = [UIColor clearColor];//FIXME:MBProgressHUD修改
 		// Make it invisible for now
 		self.alpha = 0.0f;
 		
