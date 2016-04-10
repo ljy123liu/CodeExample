@@ -17,8 +17,9 @@
 #import "CoreGraphicsViewController.h"
 #import "DrawRectView.h"
 #import "FlowerView.h"
+
 @interface CoreGraphicsViewController ()
-@property (nonatomic, assign) BOOL btnClick;
+@property (nonatomic, assign,getter=isBtnClick) BOOL btnClick;
 @end
 
 @implementation CoreGraphicsViewController

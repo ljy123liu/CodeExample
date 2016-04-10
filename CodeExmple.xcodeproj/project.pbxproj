@@ -13,6 +13,9 @@
 		2D0176791C80A81A001215EA /* PostValueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0176771C80A81A001215EA /* PostValueViewController.m */; };
 		2D01767A1C80A81A001215EA /* PostValueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0176781C80A81A001215EA /* PostValueViewController.xib */; };
 		2D01767D1C81F848001215EA /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D01767C1C81F848001215EA /* DataSource.m */; };
+		2D098CF21CB8FF5F00B184EA /* DefineAndConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D098CF11CB8FF5F00B184EA /* DefineAndConst.m */; };
+		2D098CF51CB902A900B184EA /* DefineAndConstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D098CF41CB902A900B184EA /* DefineAndConstViewController.m */; };
+		2D098CF81CB9052900B184EA /* ExternTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D098CF71CB9052900B184EA /* ExternTestViewController.m */; };
 		2D153E401C868058003560F7 /* OptimizeRoundCornerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D153E3F1C868058003560F7 /* OptimizeRoundCornerViewController.m */; };
 		2D153E441C86826C003560F7 /* OptimizeRoundCornerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D153E421C86826C003560F7 /* OptimizeRoundCornerTableViewCell.m */; };
 		2D153E451C86826C003560F7 /* OptimizeRoundCornerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D153E431C86826C003560F7 /* OptimizeRoundCornerTableViewCell.xib */; };
@@ -103,6 +106,12 @@
 		2D0176781C80A81A001215EA /* PostValueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostValueViewController.xib; sourceTree = "<group>"; };
 		2D01767B1C81F848001215EA /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		2D01767C1C81F848001215EA /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		2D098CF01CB8FF5F00B184EA /* DefineAndConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineAndConst.h; sourceTree = "<group>"; };
+		2D098CF11CB8FF5F00B184EA /* DefineAndConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefineAndConst.m; sourceTree = "<group>"; };
+		2D098CF31CB902A900B184EA /* DefineAndConstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineAndConstViewController.h; sourceTree = "<group>"; };
+		2D098CF41CB902A900B184EA /* DefineAndConstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefineAndConstViewController.m; sourceTree = "<group>"; };
+		2D098CF61CB9052900B184EA /* ExternTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExternTestViewController.h; sourceTree = "<group>"; };
+		2D098CF71CB9052900B184EA /* ExternTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExternTestViewController.m; sourceTree = "<group>"; };
 		2D153E3E1C868058003560F7 /* OptimizeRoundCornerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptimizeRoundCornerViewController.h; sourceTree = "<group>"; };
 		2D153E3F1C868058003560F7 /* OptimizeRoundCornerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptimizeRoundCornerViewController.m; sourceTree = "<group>"; };
 		2D153E411C86826C003560F7 /* OptimizeRoundCornerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptimizeRoundCornerTableViewCell.h; sourceTree = "<group>"; };
@@ -248,6 +257,19 @@
 				2D0176781C80A81A001215EA /* PostValueViewController.xib */,
 			);
 			path = PostValue;
+			sourceTree = "<group>";
+		};
+		2D098CEF1CB8FF2D00B184EA /* DefineAndConst */ = {
+			isa = PBXGroup;
+			children = (
+				2D098CF01CB8FF5F00B184EA /* DefineAndConst.h */,
+				2D098CF11CB8FF5F00B184EA /* DefineAndConst.m */,
+				2D098CF31CB902A900B184EA /* DefineAndConstViewController.h */,
+				2D098CF41CB902A900B184EA /* DefineAndConstViewController.m */,
+				2D098CF61CB9052900B184EA /* ExternTestViewController.h */,
+				2D098CF71CB9052900B184EA /* ExternTestViewController.m */,
+			);
+			name = DefineAndConst;
 			sourceTree = "<group>";
 		};
 		2D25FFBA1C8597FE007BAE7F /* Vender */ = {
@@ -435,6 +457,7 @@
 		2D908DF81C759CF500BCC770 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				2D098CEF1CB8FF2D00B184EA /* DefineAndConst */,
 				2D6FFA1C1C9EFF0100F086F8 /* Core Graphics */,
 				2D6FFA181C9EFA6A00F086F8 /* Core Animation */,
 				2D0176701C80A7D7001215EA /* PostValue */,
@@ -777,10 +800,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D098CF21CB8FF5F00B184EA /* DefineAndConst.m in Sources */,
 				2D768C741C7B4CB7007A98EA /* PickerViewViewController.m in Sources */,
 				2DB0B31F1C82E25B00B31783 /* ImageProcessingViewController.m in Sources */,
 				2D25FFC51C85C367007BAE7F /* FPSView.m in Sources */,
 				2D25EC431C85CE6000E95C76 /* buttonTableViewCell.m in Sources */,
+				2D098CF51CB902A900B184EA /* DefineAndConstViewController.m in Sources */,
 				2D908DF41C75570C00BCC770 /* FourViewController.m in Sources */,
 				2DB0B3241C82EF3300B31783 /* ImageViewerViewController.m in Sources */,
 				2D01767D1C81F848001215EA /* DataSource.m in Sources */,
@@ -803,6 +828,7 @@
 				2DEE81FE1C79E0170041CB11 /* ActivityIndicatorViewController.m in Sources */,
 				2D80DA0D1CAFDF6100CB3E18 /* SScrollView.m in Sources */,
 				2DAECFBD1C7AEE050022EFA1 /* RoundCornerViewController.m in Sources */,
+				2D098CF81CB9052900B184EA /* ExternTestViewController.m in Sources */,
 				2D153E441C86826C003560F7 /* OptimizeRoundCornerTableViewCell.m in Sources */,
 				2D6FFA241C9F049E00F086F8 /* DrawRectView.m in Sources */,
 				2DB0B3151C82C9BF00B31783 /* UIImageView+RoundRect.m in Sources */,
