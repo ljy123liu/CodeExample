@@ -39,6 +39,8 @@
 		2D74566D1C9B9AB00040AA74 /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7455AA1C9B9AAF0040AA74 /* 12.png */; };
 		2D74566E1C9B9AB00040AA74 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7455AB1C9B9AAF0040AA74 /* 10.png */; };
 		2D768C741C7B4CB7007A98EA /* PickerViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D768C731C7B4CB7007A98EA /* PickerViewViewController.m */; };
+		2D7E266B1CC536A100F42CBF /* NSThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E266A1CC536A100F42CBF /* NSThreadViewController.m */; };
+		2D7E266E1CC536B100F42CBF /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E266D1CC536B100F42CBF /* GCDViewController.m */; };
 		2D80DA0D1CAFDF6100CB3E18 /* SScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D80DA0B1CAFDF6100CB3E18 /* SScrollView.m */; };
 		2D80DA111CB392EA00CB3E18 /* SScrollViewViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D80DA101CB392EA00CB3E18 /* SScrollViewViewContoller.m */; };
 		2D908DBB1C7556CA00BCC770 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908DBA1C7556CA00BCC770 /* main.m */; };
@@ -148,6 +150,10 @@
 		2D7455AB1C9B9AAF0040AA74 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
 		2D768C721C7B4CB7007A98EA /* PickerViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewViewController.h; sourceTree = "<group>"; };
 		2D768C731C7B4CB7007A98EA /* PickerViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewViewController.m; sourceTree = "<group>"; };
+		2D7E26691CC536A100F42CBF /* NSThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSThreadViewController.h; path = CodeExmple/Code/NSThreadViewController.h; sourceTree = SOURCE_ROOT; };
+		2D7E266A1CC536A100F42CBF /* NSThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSThreadViewController.m; path = CodeExmple/Code/NSThreadViewController.m; sourceTree = SOURCE_ROOT; };
+		2D7E266C1CC536B100F42CBF /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDViewController.h; path = CodeExmple/Code/GCDViewController.h; sourceTree = SOURCE_ROOT; };
+		2D7E266D1CC536B100F42CBF /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDViewController.m; path = CodeExmple/Code/GCDViewController.m; sourceTree = SOURCE_ROOT; };
 		2D80DA0B1CAFDF6100CB3E18 /* SScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SScrollView.m; path = ../Lib/SScrollView.m; sourceTree = "<group>"; };
 		2D80DA0C1CAFDF6100CB3E18 /* SScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SScrollView.h; path = ../Lib/SScrollView.h; sourceTree = "<group>"; };
 		2D80DA0F1CB392EA00CB3E18 /* SScrollViewViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SScrollViewViewContoller.h; sourceTree = "<group>"; };
@@ -556,6 +562,10 @@
 			children = (
 				2D6FFA111C9EE04F00F086F8 /* ThreadViewController.h */,
 				2D6FFA121C9EE04F00F086F8 /* ThreadViewController.m */,
+				2D7E26691CC536A100F42CBF /* NSThreadViewController.h */,
+				2D7E266A1CC536A100F42CBF /* NSThreadViewController.m */,
+				2D7E266C1CC536B100F42CBF /* GCDViewController.h */,
+				2D7E266D1CC536B100F42CBF /* GCDViewController.m */,
 				2D6FFA141C9EEA0800F086F8 /* AccountManager.h */,
 				2D6FFA151C9EEA0800F086F8 /* AccountManager.m */,
 			);
@@ -800,6 +810,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D7E266E1CC536B100F42CBF /* GCDViewController.m in Sources */,
 				2D098CF21CB8FF5F00B184EA /* DefineAndConst.m in Sources */,
 				2D768C741C7B4CB7007A98EA /* PickerViewViewController.m in Sources */,
 				2DB0B31F1C82E25B00B31783 /* ImageProcessingViewController.m in Sources */,
@@ -817,6 +828,7 @@
 				2DB0B3181C82CF6900B31783 /* StretchImageViewController.m in Sources */,
 				2D908DBE1C7556CA00BCC770 /* AppDelegate.m in Sources */,
 				2D908E0B1C75A4A700BCC770 /* SpliceCircleViewController.m in Sources */,
+				2D7E266B1CC536A100F42CBF /* NSThreadViewController.m in Sources */,
 				2DEE82011C79F15F0041CB11 /* AlertControllerViewController.m in Sources */,
 				2D908E061C759DE000BCC770 /* UIBarButtonItem+Extension.m in Sources */,
 				2D908DBB1C7556CA00BCC770 /* main.m in Sources */,

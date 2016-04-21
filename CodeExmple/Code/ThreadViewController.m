@@ -9,6 +9,13 @@
  *  多线程
  *  简单来说相当于cpu在10个线程之间来回切换，造成一个多任务处理的假象。
  */
+
+/**
+ *  多线程与但线程操作
+ *  并行队列异步执行才能在多线程，并行队列同步执行只会在主线程执行
+ */
+
+
 /**
  *  基本概念
  *  1.进程和线程
@@ -48,95 +55,66 @@
 
 #import "ThreadViewController.h"
 #import "AccountManager.h"
-@interface ThreadViewController ()
+@interface ThreadViewController () <UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic,strong)UITableView *tableView;
+@property (nonatomic,strong)NSArray *dataArray;
 
 @end
 
 @implementation ThreadViewController
+
 #pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"多线程";
-    self.view.backgroundColor = [UIColor whiteColor];
-    /**
-     *  NSThread
-     */
-    [self NSThreadClassMethod];
-    [self NSThreadInstanceMethod];
+    [self addUI];
+    [self dataTitle];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)addUI {
+    
+    self.tableView = [[UITableView alloc]initWithFrame:self.view.frame];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.tableFooterView = [UIView new];
+    [self.view addSubview:_tableView];
 }
 
-#pragma mark - NSThread
-/**
- *  实例方法创建线程
- */
-- (void)NSThreadInstanceMethod {
-    NSThread *myThread = [[NSThread alloc] initWithTarget:self selector:@selector(NSThreadDoSomeThingWithInstanceMethod) object:nil];
-    [myThread start];
+- (void)dataTitle {
+    
+    self.dataArray = [NSArray array];
+    self.dataArray = @[@"NSThreadViewController",@"GCDViewController"];
 }
 
-/**
- *  类方法创建新线程
- */
-- (void)NSThreadClassMethod {
-    [NSThread detachNewThreadSelector:@selector(NSThreadDoSomeThingWithClassMethod:) toTarget:self withObject:@"sendValue:NSThread"];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return _dataArray.count;
 }
 
-- (void)NSThreadDoSomeThingWithInstanceMethod {
-    NSLog(@"NSThread - Instance Method");
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *iden = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:iden];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:iden];
+    }
+    NSString *str = _dataArray[indexPath.row];
+    cell.textLabel.text = str;
+    return cell;
 }
 
-- (void)NSThreadDoSomeThingWithClassMethod:(id)object {
-    NSLog(@"%@",object);
-    NSLog(@"NSThread - Class Method");
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSString *className = self.dataArray[indexPath.row];
+    Class class = NSClassFromString(className);
+    if (class) {
+        UIViewController *ctrl = class.new;
+        ctrl.title = _dataArray[indexPath.row];
+        [self.navigationController pushViewController:ctrl animated:YES];
+    }
+    //取消返回时候的选中高亮状态
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
-/**
- *  不显式创建线程,（可以取消线程操作）
- */
-- (void)NSObjectMethodWithPerformSelector {
-    //在主线程更新UI
-    [self performSelectorOnMainThread:@selector(doSomeThingOnMainThread) withObject:nil waitUntilDone:YES];
-    //后台线程
-    [self performSelectorInBackground:@selector(doSomeThingInBackGround) withObject:nil];
-    //延时执行
-    [self performSelector:@selector(doSomeDelay) withObject:nil afterDelay:2.0];
-    //取消线程操作
-    [[self class] cancelPreviousPerformRequestsWithTarget:self];
-}
-
-- (void)doSomeThingOnMainThread {
-    NSLog(@"performSelectorOnMainThread");
-}
-
-- (void)doSomeThingInBackGround {
-    NSLog(@"performSelectorInBackground");
-}
-
-- (void)doSomeDelay {
-    NSLog(@"performSelector:afterDelay");
-}
-
-
-#pragma mark - GCD
-/**
- *  单例
- */
-+ (AccountManager *)shareManager {
-    static AccountManager *manager = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        manager = [AccountManager new];
-    });
-    return manager;
-}
-
-
-
 
 /*
 #pragma mark - Navigation
