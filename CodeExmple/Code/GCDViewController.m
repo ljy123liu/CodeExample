@@ -14,7 +14,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"GCD";
-    [self dispatchBarrierAsyncDemo];
+//    [self dispatchBarrierAsyncDemo];
+//    [self deadLockCase1];
 }
 
 #pragma mark - GCD
@@ -136,6 +137,7 @@
     dispatch_async(dataQueue, ^{
         NSLog(@"read data 4");
     });
+    NSLog(@"after barrier log 10");
 }
 
 //dispatch groups是专门用来监视多个异步任务。dispatch_group_t实例用来追踪不同队列中的不同任务。
@@ -184,14 +186,86 @@
     NSLog(@"can continue");//主线程执行
 }
 
+//Dispatch Block
+- (void)createDispatchBlock {
+    //普通
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("concurrentQueue", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_block_t block = dispatch_block_create(0, ^{
+        NSLog(@"run block");
+    });
+    dispatch_async(concurrentQueue, block);
+    
+    dispatch_block_t qosBlock  = dispatch_block_create_with_qos_class(0, QOS_CLASS_USER_INITIATED, -1, ^{
+        NSLog(@"run qos block");
+    });
+    dispatch_async(concurrentQueue, qosBlock);
+}
 
+/**
+ *  dispatch_block_wait：可以根据dispatch block来设置等待时间，参数DISPATCH_TIME_FOREVER会一直等待block结束
+ */
+- (void)dispatchBlockWaitDemo {
+    dispatch_queue_t serialQueue = dispatch_queue_create("com.starming.gcddemo.serialqueue", DISPATCH_QUEUE_SERIAL);
+    dispatch_block_t block = dispatch_block_create(0, ^{
+        NSLog(@"star");
+        [NSThread sleepForTimeInterval:5.f];
+        NSLog(@"end");
+    });
+    dispatch_async(serialQueue, block);
+    //设置DISPATCH_TIME_FOREVER会一直等到前面任务都完成
+    dispatch_block_wait(block, DISPATCH_TIME_FOREVER);
+    NSLog(@"ok, now can go on");
+}
 
+/**
+ *  dispatch_block_notify：可以监视指定dispatch block结束，然后再加入一个block到队列中。三个参数分别为，第一个是需要监视的block，第二个参数是需要提交执行的队列，第三个是待加入到队列中的block
+ */
+- (void)dispatchBlockNotifyDemo {
+    dispatch_queue_t serialQueue = dispatch_queue_create("com.starming.gcddemo.serialqueue", DISPATCH_QUEUE_SERIAL);
+    dispatch_block_t firstBlock = dispatch_block_create(0, ^{
+        NSLog(@"first block start");
+        [NSThread sleepForTimeInterval:2.f];
+        NSLog(@"first block end");
+    });
+    dispatch_async(serialQueue, firstBlock);
+    dispatch_block_t secondBlock = dispatch_block_create(0, ^{
+        NSLog(@"second block run");
+    });
+    //first block执行完才在serial queue中执行second block
+    dispatch_block_notify(firstBlock, serialQueue, secondBlock);
+}
 
+/**
+ *  dispatch_block_cancel：iOS8后GCD支持对dispatch block的取消
+ */
+- (void)dispatchBlockCancelDemo {
+    dispatch_queue_t serialQueue = dispatch_queue_create("com.starming.gcddemo.serialqueue", DISPATCH_QUEUE_SERIAL);
+    dispatch_block_t firstBlock = dispatch_block_create(0, ^{
+        NSLog(@"first block start");
+        [NSThread sleepForTimeInterval:2.f];
+        NSLog(@"first block end");
+    });
+    dispatch_block_t secondBlock = dispatch_block_create(0, ^{
+        NSLog(@"second block run");
+    });
+    dispatch_async(serialQueue, firstBlock);
+    dispatch_async(serialQueue, secondBlock);
+    //取消secondBlock
+    dispatch_block_cancel(secondBlock);
+}
 
-
-
-
-
+/**
+ *  GCD死锁
+ 当前串行队列里面同步执行当前串行队列就会死锁，解决的方法就是将同步的串行队列放到另外一个线程就能够解决。
+ */
+- (void)deadLockCase1 {
+    NSLog(@"1");
+    //主队列的同步线程，按照FIFO的原则（先入先出），2排在3后面会等3执行完，但因为同步线程，3又要等2执行完，相互等待成为死锁。
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        NSLog(@"2");
+    });
+    NSLog(@"3");
+}
 
 
 

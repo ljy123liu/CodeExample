@@ -61,6 +61,7 @@
 		2D908E071C759DE000BCC770 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908E041C759DE000BCC770 /* UIImage+Extension.m */; };
 		2D908E0B1C75A4A700BCC770 /* SpliceCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908E0A1C75A4A700BCC770 /* SpliceCircleViewController.m */; };
 		2D90B16E1C9BDC9C008017F3 /* alpha.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D90B16D1C9BDC9C008017F3 /* alpha.png */; };
+		2D9ABBE21CE1781100252D5B /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9ABBE11CE1781100252D5B /* DemoTests.m */; };
 		2DA94FB41C901DBA0047AF46 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA94FB31C901DBA0047AF46 /* Reveal.framework */; };
 		2DAECFBD1C7AEE050022EFA1 /* RoundCornerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAECFBC1C7AEE050022EFA1 /* RoundCornerViewController.m */; };
 		2DAECFC01C7B0E800022EFA1 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAECFBF1C7B0E800022EFA1 /* DatePickerViewController.m */; };
@@ -193,6 +194,7 @@
 		2D908E091C75A4A700BCC770 /* SpliceCircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpliceCircleViewController.h; sourceTree = "<group>"; };
 		2D908E0A1C75A4A700BCC770 /* SpliceCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpliceCircleViewController.m; sourceTree = "<group>"; };
 		2D90B16D1C9BDC9C008017F3 /* alpha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alpha.png; sourceTree = "<group>"; };
+		2D9ABBE11CE1781100252D5B /* DemoTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTests.m; sourceTree = "<group>"; };
 		2DA94FB31C901DBA0047AF46 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		2DAECFBB1C7AEE050022EFA1 /* RoundCornerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundCornerViewController.h; sourceTree = "<group>"; };
 		2DAECFBC1C7AEE050022EFA1 /* RoundCornerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundCornerViewController.m; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 		2D908DD21C7556CA00BCC770 /* CodeExmpleTests */ = {
 			isa = PBXGroup;
 			children = (
+				2D9ABBE11CE1781100252D5B /* DemoTests.m */,
 				2D908DD31C7556CA00BCC770 /* CodeExmpleTests.m */,
 				2D908DD51C7556CA00BCC770 /* Info.plist */,
 			);
@@ -864,6 +867,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9ABBE21CE1781100252D5B /* DemoTests.m in Sources */,
 				2D908DD41C7556CA00BCC770 /* CodeExmpleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1137,8 +1141,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers/Public/AFNetworking\"";
 				INFOPLIST_FILE = CodeExmpleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = com.WanJianTechnology.CodeExmpleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeExmple.app/CodeExmple";
@@ -1149,8 +1155,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers/Public/AFNetworking\"";
 				INFOPLIST_FILE = CodeExmpleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = com.WanJianTechnology.CodeExmpleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeExmple.app/CodeExmple";

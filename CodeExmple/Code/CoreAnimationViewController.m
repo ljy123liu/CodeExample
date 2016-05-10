@@ -22,6 +22,17 @@
     self.view.layer.contentsScale = [[UIScreen mainScreen] scale];
     self.view.layer.contentsGravity = kCAGravityCenter;
     self.view.layer.contents = (id)[image CGImage];
+    
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 300, 30)];
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    textField.placeholder = @"请输入文字";
+    
+    self.navigationItem.titleView = textField;
+    
+    UITextField *textField2 = [[UITextField alloc] initWithFrame:CGRectMake(10, 100, 300, 40)];
+    textField2.borderStyle = UITextBorderStyleRoundedRect;
+    textField2.placeholder = @"副科级阿里看风景啊";
+    [self.view addSubview:textField2];
 }
 
 - (void)didReceiveMemoryWarning {
