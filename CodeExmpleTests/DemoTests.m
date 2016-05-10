@@ -47,18 +47,48 @@
 
 //断言
 -(void)testAssert {
-    //通用断言
-//    XCTAssert(<#expression, ...#>);
-    //常用断言
-//    XCTAssertTrue(<#expression, ...#>);
-//    XCTAssertFalse(<#expression, ...#>);
-//    XCTAssertEqual(<#expression1#>, <#expression2, ...#>);
-//    XCTAssertNotEqual(<#expression1#>, <#expression2, ...#>);
-//    XCTAssertEqualWithAccuracy(<#expression1#>, <#expression2#>, <#accuracy, ...#>);
-//    XCTAssertNotEqualWithAccuracy(<#expression1#>, <#expression2#>, <#accuracy, ...#>);
-//    XCTAssertNil(<#expression, ...#>);
-//    XCTAssertNotNil(<#expression, ...#>);
-//    XCTFail(<#...#>);
+    
+    NSString *a1;
+    NSString *a2;
+    int n1;
+    int n2;
+    float accuracy = 0.5;//double,精确度
+    BOOL isRight;
+    NSError *error;
+    
+/**
+ *  通用断言
+ */
+    XCTAssert(isRight,@"isRight为true的时候通过测试");
+    
+/**
+ *  常用断言
+ */
+    XCTAssertTrue(a1,@"成功描述");
+    XCTAssertFalse(a2,@"失败描述");
+    
+    XCTAssertEqual(a1, a2,@"当a1和a2是 C语言标量、结构体或联合体时使用, 判断的是变量的地址,相等");
+    XCTAssertNotEqual(a1, a2,@"当a1和a2是 C语言标量、结构体或联合体时使用, 判断的是变量的地址，不相等");
+    
+    XCTAssertEqualWithAccuracy(n1, n2, accuracy,@"+,-accuracy范围内相等的描述");
+    XCTAssertNotEqualWithAccuracy(n1, n2, accuracy,@"+,-accuracy范围内不相等的描述");
+    
+    XCTAssertEqualObjects(a1, a2,@"[a1 isEqual:a2]值为true时通过");
+    XCTAssertNotEqualObjects(a1, a2,@"[a1 isEqual:a2]值为false时通过]");
+    
+    XCTAssertNil(a1,@"a1为空的时候通过测试");
+    XCTAssertNotNil(a1,@"a1不为空的时候通过测试");
+    
+    XCTAssertThrows(error,@"异常测试，发生异常通过，当error != nil的时候不通过");
+    XCTAssertNoThrow(error,@"异常测试，当error == nil没有发生异常时通过测试");
+    
+//    XCTAssertThrowsSpecific(<#expression#>, <#exception_class, ...#>)当expression发生specificException异常时通过；如果发生发生其它异常，或者不发生异常的时候均不通过
+//    XCTAssertThrowsSpecificNamed(<#expression#>, <#exception_class#>, <#exception_name, ...#>)当expression发生具体异常名称的异常通过测试，反之不通过
+    
+//    XCTAssertNoThrowSpecific(<#expression#>, <#exception_class, ...#>)当expression没有发生具体异常名称的异常时通过测试，反之不通过
+//    XCTAssertNoThrowSpecificNamed(<#expression#>, <#exception_class#>, <#exception_name, ...#>)当expression没有发生具体异常名称的异常时通过测试，反之不通过
+    
+    XCTFail(@"直接失败断言");
 }
 
 
@@ -69,6 +99,7 @@
  *  3、Then检查一下测试结果是否符合预期
  */
 - (void)testAddDemo {
+    
     //Given
     //设置变量和设置预期值
     NSUInteger a = 10;
@@ -86,6 +117,7 @@
 
 //测试异步任务1：expectationWithDescription
 - (void)testAsynExample {
+    
     XCTestExpectation *exp = [self expectationWithDescription:@"这里可以是操作出错的原因描述"];
     NSOperationQueue *queue = [NSOperationQueue new];
     [queue addOperationWithBlock:^{
@@ -107,6 +139,7 @@
 
 //测试异步任务2：expectationForPredicate
 //- (void)testThatBackgroundImageChanges {
+
 //    XCTAssertNil([self.button backgroundImageForState:UIControlStateNormal]);
 //    NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(UIButton  *_Nonnull button, NSDictionary<NSString *,id> * _Nullable bindings) {
 //        return [button backgroundImageForState:UIControlStateNormal] != nil;
@@ -121,6 +154,7 @@
 
 //测试异步任务3：expectationForNotification
 - (void)testAsynNotification {
+    
     [self expectationForNotification:@"通知名称" object:nil handler:nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"通知名称" object:nil];
     
@@ -130,6 +164,7 @@
 
 //因为测试方法在主线程执行完就会结束，所以需要在方法结束前设置等待，回调的时候让她它继续执行，否则看不到block里面的结果
 - (void)testAFN {
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",nil];
     [manager GET:@"http://www.weather.com.cn/adat/sk/101110101.html" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -140,7 +175,7 @@
         [[NSNotificationCenter defaultCenter]postNotificationName:@"RSBaseTest" object:nil];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (error) {
-            XCTFail(@"失败");
+            XCTFail(@"网络请求失败");
             [[NSNotificationCenter defaultCenter]postNotificationName:@"RSBaseTest" object:nil];
         }
     }];
