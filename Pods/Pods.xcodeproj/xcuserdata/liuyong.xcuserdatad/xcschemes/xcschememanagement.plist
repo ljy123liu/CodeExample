@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FMDB.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,6 +57,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>0B37E55BC11C06931D5B4CEF1DA1AD71</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>426BC4549A625B5E1E4200D5261A98BF</key>
 		<dict>
 			<key>primary</key>
@@ -72,32 +72,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>775D8249126592309C436066316A4D22</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>928353533005A4198EBDA5B700D37B64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F12FB4A63E20F601CFB2E64A65B57C1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C4F251AC5BB794F33F3326B9D679AB62</key>
+		<key>B8EEF54D1742A2EC69E43B80BBA7CBE6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>D54AB3ECEB9A8FBA15D4F73CBE326692</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E8EC9748FA47504F40BC0167B1C7CCE1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FD9F7F5A291872575DFF71942FA23CBA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

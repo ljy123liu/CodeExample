@@ -19,6 +19,11 @@ static DataSource *dataSource;
     }
     return dataSource;
 }
+
+- (NSUInteger)addMethodWith:(NSUInteger)a b:(NSUInteger)b {
+    return a + b;
+}
+
 /**
  *  单例
  *

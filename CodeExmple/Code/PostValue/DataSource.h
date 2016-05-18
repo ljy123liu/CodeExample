@@ -11,4 +11,5 @@
 @interface DataSource : NSObject
 @property (nonatomic, strong)NSString *value;
 + (DataSource *)shareDataSource;
+- (NSUInteger)addMethodWith:(NSUInteger)a b:(NSUInteger)b;
 @end

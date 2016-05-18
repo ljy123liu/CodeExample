@@ -25,6 +25,8 @@
 		2D25FFC21C85C2C1007BAE7F /* LYFPSLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D25FFC11C85C2C1007BAE7F /* LYFPSLabelViewController.m */; };
 		2D25FFC51C85C367007BAE7F /* FPSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D25FFC41C85C367007BAE7F /* FPSView.m */; };
 		2D25FFC71C85C378007BAE7F /* FPSView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D25FFC61C85C378007BAE7F /* FPSView.xib */; };
+		2D31AE9D1CE30AD400F38FED /* XCTestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D31AE9C1CE30AD400F38FED /* XCTestsViewController.m */; };
+		2D31AE9F1CE30B6100F38FED /* AddMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D31AE9E1CE30B6100F38FED /* AddMethod.m */; };
 		2D6FFA131C9EE04F00F086F8 /* ThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FFA121C9EE04F00F086F8 /* ThreadViewController.m */; };
 		2D6FFA161C9EEA0800F086F8 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FFA151C9EEA0800F086F8 /* AccountManager.m */; };
 		2D6FFA1B1C9EFA8B00F086F8 /* CoreAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FFA1A1C9EFA8B00F086F8 /* CoreAnimationViewController.m */; };
@@ -130,6 +132,9 @@
 		2D25FFC31C85C367007BAE7F /* FPSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPSView.h; sourceTree = "<group>"; };
 		2D25FFC41C85C367007BAE7F /* FPSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPSView.m; sourceTree = "<group>"; };
 		2D25FFC61C85C378007BAE7F /* FPSView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FPSView.xib; sourceTree = "<group>"; };
+		2D31AE9B1CE30AD400F38FED /* XCTestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTestsViewController.h; sourceTree = "<group>"; };
+		2D31AE9C1CE30AD400F38FED /* XCTestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCTestsViewController.m; sourceTree = "<group>"; };
+		2D31AE9E1CE30B6100F38FED /* AddMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMethod.m; sourceTree = "<group>"; };
 		2D6FFA111C9EE04F00F086F8 /* ThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadViewController.h; path = CodeExmple/Code/ThreadViewController.h; sourceTree = SOURCE_ROOT; };
 		2D6FFA121C9EE04F00F086F8 /* ThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThreadViewController.m; path = CodeExmple/Code/ThreadViewController.m; sourceTree = SOURCE_ROOT; };
 		2D6FFA141C9EEA0800F086F8 /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountManager.h; path = CodeExmple/Code/AccountManager.h; sourceTree = SOURCE_ROOT; };
@@ -159,6 +164,7 @@
 		2D80DA0C1CAFDF6100CB3E18 /* SScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SScrollView.h; path = ../Lib/SScrollView.h; sourceTree = "<group>"; };
 		2D80DA0F1CB392EA00CB3E18 /* SScrollViewViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SScrollViewViewContoller.h; sourceTree = "<group>"; };
 		2D80DA101CB392EA00CB3E18 /* SScrollViewViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SScrollViewViewContoller.m; sourceTree = "<group>"; };
+		2D8F37851CE77C62007BFAD5 /* TestAssertDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAssertDefine.h; sourceTree = "<group>"; };
 		2D908DB61C7556CA00BCC770 /* CodeExmple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeExmple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D908DBA1C7556CA00BCC770 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2D908DBC1C7556CA00BCC770 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -377,6 +383,8 @@
 		2D80DA0A1CAFDD8600CB3E18 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2D31AE9B1CE30AD400F38FED /* XCTestsViewController.h */,
+				2D31AE9C1CE30AD400F38FED /* XCTestsViewController.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -447,9 +455,11 @@
 		2D908DD21C7556CA00BCC770 /* CodeExmpleTests */ = {
 			isa = PBXGroup;
 			children = (
+				2D31AE9E1CE30B6100F38FED /* AddMethod.m */,
 				2D9ABBE11CE1781100252D5B /* DemoTests.m */,
 				2D908DD31C7556CA00BCC770 /* CodeExmpleTests.m */,
 				2D908DD51C7556CA00BCC770 /* Info.plist */,
+				2D8F37851CE77C62007BFAD5 /* TestAssertDefine.h */,
 			);
 			path = CodeExmpleTests;
 			sourceTree = "<group>";
@@ -828,6 +838,7 @@
 				2D908DF71C7557DB00BCC770 /* TabBarViewController.m in Sources */,
 				2D6FFA1B1C9EFA8B00F086F8 /* CoreAnimationViewController.m in Sources */,
 				2D0176791C80A81A001215EA /* PostValueViewController.m in Sources */,
+				2D31AE9D1CE30AD400F38FED /* XCTestsViewController.m in Sources */,
 				2DB0B3181C82CF6900B31783 /* StretchImageViewController.m in Sources */,
 				2D908DBE1C7556CA00BCC770 /* AppDelegate.m in Sources */,
 				2D908E0B1C75A4A700BCC770 /* SpliceCircleViewController.m in Sources */,
@@ -867,6 +878,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D31AE9F1CE30B6100F38FED /* AddMethod.m in Sources */,
 				2D9ABBE21CE1781100252D5B /* DemoTests.m in Sources */,
 				2D908DD41C7556CA00BCC770 /* CodeExmpleTests.m in Sources */,
 			);
@@ -1171,6 +1183,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = CodeExmpleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				New_F = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.WanJianTechnology.CodeExmpleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = CodeExmple;
@@ -1183,6 +1196,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = CodeExmpleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				New_F = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.WanJianTechnology.CodeExmpleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = CodeExmple;

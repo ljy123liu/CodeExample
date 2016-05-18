@@ -18,7 +18,6 @@
 /**
  *  block定义
  *
- *  @param str <#str description#>
  */
 typedef void(^postValueBlock)(NSString *str);
 @interface PostValue2ViewController : UIViewController

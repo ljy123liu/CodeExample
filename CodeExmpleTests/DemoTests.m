@@ -44,9 +44,9 @@
     }];
 }
 
-
+//禁止一个测试用例，只需要在方法名字前加 DISABLED
 //断言
--(void)testAssert {
+-(void)DISABLED_testAssert {
     
     NSString *a1;
     NSString *a2;
@@ -67,6 +67,7 @@
     XCTAssertTrue(a1,@"成功描述");
     XCTAssertFalse(a2,@"失败描述");
     
+    //在C语言中，枚举类型、字符型和各种整数的表示形式统一叫做标量类型
     XCTAssertEqual(a1, a2,@"当a1和a2是 C语言标量、结构体或联合体时使用, 判断的是变量的地址,相等");
     XCTAssertNotEqual(a1, a2,@"当a1和a2是 C语言标量、结构体或联合体时使用, 判断的是变量的地址，不相等");
     
@@ -82,11 +83,11 @@
     XCTAssertThrows(error,@"异常测试，发生异常通过，当error != nil的时候不通过");
     XCTAssertNoThrow(error,@"异常测试，当error == nil没有发生异常时通过测试");
     
-//    XCTAssertThrowsSpecific(<#expression#>, <#exception_class, ...#>)当expression发生specificException异常时通过；如果发生发生其它异常，或者不发生异常的时候均不通过
-//    XCTAssertThrowsSpecificNamed(<#expression#>, <#exception_class#>, <#exception_name, ...#>)当expression发生具体异常名称的异常通过测试，反之不通过
+//    XCTAssertThrowsSpecific(<#expression#>, <#exception_class, ...#>)当expression针对指定类不抛出异常时报错
+//    XCTAssertThrowsSpecificNamed(<#expression#>, <#exception_class#>, <#exception_name, ...#>)当expression针对特定类和特定名字不抛出异常时报错
     
-//    XCTAssertNoThrowSpecific(<#expression#>, <#exception_class, ...#>)当expression没有发生具体异常名称的异常时通过测试，反之不通过
-//    XCTAssertNoThrowSpecificNamed(<#expression#>, <#exception_class#>, <#exception_name, ...#>)当expression没有发生具体异常名称的异常时通过测试，反之不通过
+//    XCTAssertNoThrowSpecific(<#expression#>, <#exception_class, ...#>)当expression针对指定类抛出异常时报错。任意其他异常都可以；也就是说它不会报错
+//    XCTAssertNoThrowSpecificNamed(<#expression#>, <#exception_class#>, <#exception_name, ...#>)当expression针对特定类和特定名字抛出异常时报错
     
     XCTFail(@"直接失败断言");
 }
@@ -108,7 +109,7 @@
     //When
     NSUInteger result = [self add:a b:b];
     //Then
-    XCTAssertEqual(expected,result,@"add方法不相等");
+    XCTAssertEqual(expected,result,@"a、b相等");
 }
 
 - (NSUInteger)add:(NSUInteger)a b:(NSUInteger)b {
@@ -117,7 +118,7 @@
 
 //测试异步任务1：expectationWithDescription
 - (void)testAsynExample {
-    
+
     XCTestExpectation *exp = [self expectationWithDescription:@"这里可以是操作出错的原因描述"];
     NSOperationQueue *queue = [NSOperationQueue new];
     [queue addOperationWithBlock:^{
@@ -182,6 +183,66 @@
     
     [self expectationForNotification:@"RSBaseTest" object:nil handler:nil];
     [self waitForExpectationsWithTimeout:30 handler:nil];
+}
+
+/**
+ *  注意：XCTAssertEqual  和  XCTAssertEqualObjects 区别
+ *  1、XCTAssertEqual:判断条件 a1 == a2（指针指向的地址相等）, XCTAssertEqualObjects:判断条件 [a1 isEqual a2]（值相等）
+ *  2、对于NSString，Xcode会对部分字符串做优化，相同的字符串会使用同一份拷贝。NSString和基本数据类型，两种断言一样
+ */
+- (void)testAssertEqual {
+    
+    int n1 = 1;
+    int n2 = 1;
+    int n3 = n1;
+    XCTAssertEqual(n1, n2);//通过
+    XCTAssertEqual(n1, n3);//通过
+    
+    NSString *s1 = @"1";
+    NSString *s2 = @"1";
+    NSString *s3 = s1;
+
+    XCTAssertEqual(s1, s2);//通过
+    XCTAssertEqual(s1, s3);//通过
+    
+    NSArray *a1 = @[@"1"];
+    NSArray *a2 = @[@"1"];
+    NSArray *a3 = a1;
+    XCTAssertEqual(a1, a2);//不通过
+    XCTAssertEqual(a1, a3);//通过
+    
+    NSDictionary *d1 = @{@"1":@1};
+    NSDictionary *d2 = @{@"1":@1};
+    NSDictionary *d3 = d1;
+    XCTAssertEqual(d1, d2);//不通过
+    XCTAssertEqual(d1, d3);//通过
+}
+
+- (void)testAssertEqualObjects {
+    
+    int n1 = 1;
+    int n2 = 1;
+    int n3 = n1;
+    XCTAssertEqual(n1, n2);//通过
+    XCTAssertEqual(n1, n3);//通过
+    
+    NSString *s1 = @"1";
+    NSString *s2 = @"1";
+    NSString *s3 = s1;
+    XCTAssertEqualObjects(s1, s2);//通过
+    XCTAssertEqualObjects(s1, s3);//通过
+    
+    NSArray *a1 = @[@"1"];
+    NSArray *a2 = @[@"1"];
+    NSArray *a3 = a1;
+    XCTAssertEqualObjects(a1, a2);//通过
+    XCTAssertEqualObjects(a1, a3);//通过
+
+    NSDictionary *d1 = @{@"1":@1};
+    NSDictionary *d2 = @{@"1":@1};
+    NSDictionary *d3 = d1;
+    XCTAssertEqualObjects(d1, d2);//通过
+    XCTAssertEqualObjects(d1, d3);//通过
 }
 
 
