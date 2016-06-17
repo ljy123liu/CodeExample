@@ -117,7 +117,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	hud.removeFromSuperViewOnHide = YES;
 	[view addSubview:hud];
 	[hud show:animated];
-	return hud;
+	return MB_AUTORELEASE(hud);
 }
 
 + (BOOL)hideHUDForView:(UIView *)view animated:(BOOL)animated {
@@ -163,7 +163,6 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 #pragma mark - Lifecycle
 
 - (id)initWithFrame:(CGRect)frame {
-
 	self = [super initWithFrame:frame];
 	if (self) {
 		// Set default values for properties
@@ -172,7 +171,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 		self.labelText = nil;
 		self.detailsLabelText = nil;
 		self.opacity = 0.8f;
-        self.color = nil;
+		self.color = nil;
 		self.labelFont = [UIFont boldSystemFontOfSize:kLabelFontSize];
 		self.labelColor = [UIColor whiteColor];
 		self.detailsLabelFont = [UIFont boldSystemFontOfSize:kDetailsLabelFontSize];
@@ -194,7 +193,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 
 		// Transparent background
 		self.opaque = NO;
-		self.backgroundColor = [UIColor clearColor];//FIXME:MBProgressHUD修改
+		self.backgroundColor = [UIColor clearColor];
 		// Make it invisible for now
 		self.alpha = 0.0f;
 		

@@ -33,7 +33,7 @@
 - (void)dataTitle {
     
     self.dataArray = [NSArray array];
-    self.dataArray = @[@"SpliceCircleViewController",@"HideNavBarAndTabBarViewController",@"ImageProcessingViewController",@"ImageViewerViewController",@"LYFPSLabelViewController"];
+    self.dataArray = @[@"SpliceCircleViewController",@"HideNavBarAndTabBarViewController",@"ImageProcessingViewController",@"ImageViewerViewController",@"LYFPSLabelViewController",@"UIViewAutoAdaptToScreenController"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11E7013BCAE0DD10A971E50A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB55230364E4E2858368A7A9 /* libPods.a */; };
+		2D001FFF1D13C52A00DE768E /* UIViewAutoAdaptToScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D001FFE1D13C52A00DE768E /* UIViewAutoAdaptToScreenController.m */; };
+		2D0020021D13C57700DE768E /* UIButton+SelectedType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0020011D13C57700DE768E /* UIButton+SelectedType.m */; };
 		2D01766C1C8003E9001215EA /* LYProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D01766B1C8003E9001215EA /* LYProgressViewController.m */; };
 		2D0176741C80A805001215EA /* PostValue2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0176721C80A805001215EA /* PostValue2ViewController.m */; };
 		2D0176751C80A805001215EA /* PostValue2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0176731C80A805001215EA /* PostValue2ViewController.xib */; };
@@ -33,13 +36,6 @@
 		2D6FFA1F1C9EFF2F00F086F8 /* CoreGraphicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FFA1E1C9EFF2F00F086F8 /* CoreGraphicsViewController.m */; };
 		2D6FFA241C9F049E00F086F8 /* DrawRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FFA231C9F049E00F086F8 /* DrawRectView.m */; };
 		2D6FFA271C9F083700F086F8 /* FlowerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FFA261C9F083700F086F8 /* FlowerView.m */; };
-		2D7456621C9B9AB00040AA74 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D74559F1C9B9AAF0040AA74 /* 11.png */; };
-		2D7456651C9B9AB00040AA74 /* 13.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7455A21C9B9AAF0040AA74 /* 13.png */; };
-		2D7456671C9B9AB00040AA74 /* 14.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7455A41C9B9AAF0040AA74 /* 14.png */; };
-		2D7456691C9B9AB00040AA74 /* 15.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7455A61C9B9AAF0040AA74 /* 15.png */; };
-		2D74566B1C9B9AB00040AA74 /* 16.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7455A81C9B9AAF0040AA74 /* 16.png */; };
-		2D74566D1C9B9AB00040AA74 /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7455AA1C9B9AAF0040AA74 /* 12.png */; };
-		2D74566E1C9B9AB00040AA74 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7455AB1C9B9AAF0040AA74 /* 10.png */; };
 		2D768C741C7B4CB7007A98EA /* PickerViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D768C731C7B4CB7007A98EA /* PickerViewViewController.m */; };
 		2D7E266B1CC536A100F42CBF /* NSThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E266A1CC536A100F42CBF /* NSThreadViewController.m */; };
 		2D7E266E1CC536B100F42CBF /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E266D1CC536B100F42CBF /* GCDViewController.m */; };
@@ -62,9 +58,7 @@
 		2D908E061C759DE000BCC770 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908E021C759DE000BCC770 /* UIBarButtonItem+Extension.m */; };
 		2D908E071C759DE000BCC770 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908E041C759DE000BCC770 /* UIImage+Extension.m */; };
 		2D908E0B1C75A4A700BCC770 /* SpliceCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D908E0A1C75A4A700BCC770 /* SpliceCircleViewController.m */; };
-		2D90B16E1C9BDC9C008017F3 /* alpha.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D90B16D1C9BDC9C008017F3 /* alpha.png */; };
 		2D9ABBE21CE1781100252D5B /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9ABBE11CE1781100252D5B /* DemoTests.m */; };
-		2DA94FB41C901DBA0047AF46 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA94FB31C901DBA0047AF46 /* Reveal.framework */; };
 		2DAECFBD1C7AEE050022EFA1 /* RoundCornerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAECFBC1C7AEE050022EFA1 /* RoundCornerViewController.m */; };
 		2DAECFC01C7B0E800022EFA1 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAECFBF1C7B0E800022EFA1 /* DatePickerViewController.m */; };
 		2DB0B3151C82C9BF00B31783 /* UIImageView+RoundRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0B3141C82C9BF00B31783 /* UIImageView+RoundRect.m */; };
@@ -79,7 +73,6 @@
 		2DC195271C83EB7A00C9F3EF /* UIImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC195261C83EB7A00C9F3EF /* UIImage.xcassets */; };
 		2DEE81FE1C79E0170041CB11 /* ActivityIndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEE81FD1C79E0170041CB11 /* ActivityIndicatorViewController.m */; };
 		2DEE82011C79F15F0041CB11 /* AlertControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEE82001C79F15F0041CB11 /* AlertControllerViewController.m */; };
-		927EB04BAA61C8804B8435E1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB55230364E4E2858368A7A9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +94,10 @@
 
 /* Begin PBXFileReference section */
 		1E76DF54269457157FB99C45 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		2D001FFD1D13C52A00DE768E /* UIViewAutoAdaptToScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAutoAdaptToScreenController.h; sourceTree = "<group>"; };
+		2D001FFE1D13C52A00DE768E /* UIViewAutoAdaptToScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAutoAdaptToScreenController.m; sourceTree = "<group>"; };
+		2D0020001D13C57700DE768E /* UIButton+SelectedType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SelectedType.h"; sourceTree = "<group>"; };
+		2D0020011D13C57700DE768E /* UIButton+SelectedType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SelectedType.m"; sourceTree = "<group>"; };
 		2D01766A1C8003E9001215EA /* LYProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYProgressViewController.h; sourceTree = "<group>"; };
 		2D01766B1C8003E9001215EA /* LYProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYProgressViewController.m; sourceTree = "<group>"; };
 		2D0176711C80A805001215EA /* PostValue2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostValue2ViewController.h; sourceTree = "<group>"; };
@@ -147,13 +144,6 @@
 		2D6FFA231C9F049E00F086F8 /* DrawRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawRectView.m; sourceTree = "<group>"; };
 		2D6FFA251C9F083700F086F8 /* FlowerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowerView.h; sourceTree = "<group>"; };
 		2D6FFA261C9F083700F086F8 /* FlowerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowerView.m; sourceTree = "<group>"; };
-		2D74559F1C9B9AAF0040AA74 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
-		2D7455A21C9B9AAF0040AA74 /* 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13.png; sourceTree = "<group>"; };
-		2D7455A41C9B9AAF0040AA74 /* 14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 14.png; sourceTree = "<group>"; };
-		2D7455A61C9B9AAF0040AA74 /* 15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15.png; sourceTree = "<group>"; };
-		2D7455A81C9B9AAF0040AA74 /* 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 16.png; sourceTree = "<group>"; };
-		2D7455AA1C9B9AAF0040AA74 /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
-		2D7455AB1C9B9AAF0040AA74 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
 		2D768C721C7B4CB7007A98EA /* PickerViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewViewController.h; sourceTree = "<group>"; };
 		2D768C731C7B4CB7007A98EA /* PickerViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewViewController.m; sourceTree = "<group>"; };
 		2D7E26691CC536A100F42CBF /* NSThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSThreadViewController.h; path = CodeExmple/Code/NSThreadViewController.h; sourceTree = SOURCE_ROOT; };
@@ -199,7 +189,6 @@
 		2D908E081C759EE300BCC770 /* CodeExamplePCH.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeExamplePCH.pch; sourceTree = "<group>"; };
 		2D908E091C75A4A700BCC770 /* SpliceCircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpliceCircleViewController.h; sourceTree = "<group>"; };
 		2D908E0A1C75A4A700BCC770 /* SpliceCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpliceCircleViewController.m; sourceTree = "<group>"; };
-		2D90B16D1C9BDC9C008017F3 /* alpha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alpha.png; sourceTree = "<group>"; };
 		2D9ABBE11CE1781100252D5B /* DemoTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTests.m; sourceTree = "<group>"; };
 		2DA94FB31C901DBA0047AF46 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		2DAECFBB1C7AEE050022EFA1 /* RoundCornerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundCornerViewController.h; sourceTree = "<group>"; };
@@ -236,8 +225,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				927EB04BAA61C8804B8435E1 /* libPods.a in Frameworks */,
-				2DA94FB41C901DBA0047AF46 /* Reveal.framework in Frameworks */,
+				11E7013BCAE0DD10A971E50A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +246,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D001FF91D13C33400DE768E /* UIViewAutoAdaptToScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2D001FFD1D13C52A00DE768E /* UIViewAutoAdaptToScreenController.h */,
+				2D001FFE1D13C52A00DE768E /* UIViewAutoAdaptToScreenController.m */,
+			);
+			path = UIViewAutoAdaptToScreen;
+			sourceTree = "<group>";
+		};
 		2D0176701C80A7D7001215EA /* PostValue */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,14 +364,6 @@
 		2D74559E1C9B9AAF0040AA74 /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				2D90B16D1C9BDC9C008017F3 /* alpha.png */,
-				2D74559F1C9B9AAF0040AA74 /* 11.png */,
-				2D7455A21C9B9AAF0040AA74 /* 13.png */,
-				2D7455A41C9B9AAF0040AA74 /* 14.png */,
-				2D7455A61C9B9AAF0040AA74 /* 15.png */,
-				2D7455A81C9B9AAF0040AA74 /* 16.png */,
-				2D7455AA1C9B9AAF0040AA74 /* 12.png */,
-				2D7455AB1C9B9AAF0040AA74 /* 10.png */,
 			);
 			name = icons;
 			path = ../../icons;
@@ -497,6 +486,7 @@
 		2D908DFA1C759CF500BCC770 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				2D001FF91D13C33400DE768E /* UIViewAutoAdaptToScreen */,
 				2D25FFBF1C85C2A0007BAE7F /* FPSLabel */,
 				2DB0B3201C82E27700B31783 /* ImageProcessing */,
 				2DB0B3211C82EF0F00B31783 /* ImageViewer */,
@@ -531,6 +521,8 @@
 		2D908DFC1C759D4500BCC770 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				2D0020001D13C57700DE768E /* UIButton+SelectedType.h */,
+				2D0020011D13C57700DE768E /* UIButton+SelectedType.m */,
 				2D908E001C759DE000BCC770 /* Foundation+Log.m */,
 				2D908E011C759DE000BCC770 /* UIBarButtonItem+Extension.h */,
 				2D908E021C759DE000BCC770 /* UIBarButtonItem+Extension.m */,
@@ -734,22 +726,14 @@
 			files = (
 				2D908DC91C7556CA00BCC770 /* LaunchScreen.storyboard in Resources */,
 				2D153E451C86826C003560F7 /* OptimizeRoundCornerTableViewCell.xib in Resources */,
-				2D7456691C9B9AB00040AA74 /* 15.png in Resources */,
-				2D74566E1C9B9AB00040AA74 /* 10.png in Resources */,
 				2D908DC61C7556CA00BCC770 /* Assets.xcassets in Resources */,
 				2D908DC41C7556CA00BCC770 /* Main.storyboard in Resources */,
-				2D74566B1C9B9AB00040AA74 /* 16.png in Resources */,
-				2D7456651C9B9AB00040AA74 /* 13.png in Resources */,
 				2D0176751C80A805001215EA /* PostValue2ViewController.xib in Resources */,
 				2D01767A1C80A81A001215EA /* PostValueViewController.xib in Resources */,
-				2D7456621C9B9AB00040AA74 /* 11.png in Resources */,
-				2D7456671C9B9AB00040AA74 /* 14.png in Resources */,
 				2D25EC441C85CE6000E95C76 /* buttonTableViewCell.xib in Resources */,
-				2D74566D1C9B9AB00040AA74 /* 12.png in Resources */,
 				2DC195271C83EB7A00C9F3EF /* UIImage.xcassets in Resources */,
 				2DB1A0241C77227B0074A8B5 /* SpliceCircleUI.xib in Resources */,
 				2D25FFC71C85C378007BAE7F /* FPSView.xib in Resources */,
-				2D90B16E1C9BDC9C008017F3 /* alpha.png in Resources */,
 				2DB0B31C1C82CFF800B31783 /* strectch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -841,6 +825,7 @@
 				2D31AE9D1CE30AD400F38FED /* XCTestsViewController.m in Sources */,
 				2DB0B3181C82CF6900B31783 /* StretchImageViewController.m in Sources */,
 				2D908DBE1C7556CA00BCC770 /* AppDelegate.m in Sources */,
+				2D001FFF1D13C52A00DE768E /* UIViewAutoAdaptToScreenController.m in Sources */,
 				2D908E0B1C75A4A700BCC770 /* SpliceCircleViewController.m in Sources */,
 				2D7E266B1CC536A100F42CBF /* NSThreadViewController.m in Sources */,
 				2DEE82011C79F15F0041CB11 /* AlertControllerViewController.m in Sources */,
@@ -852,6 +837,7 @@
 				2D80DA111CB392EA00CB3E18 /* SScrollViewViewContoller.m in Sources */,
 				2D908E051C759DE000BCC770 /* Foundation+Log.m in Sources */,
 				2DEE81FE1C79E0170041CB11 /* ActivityIndicatorViewController.m in Sources */,
+				2D0020021D13C57700DE768E /* UIButton+SelectedType.m in Sources */,
 				2D80DA0D1CAFDF6100CB3E18 /* SScrollView.m in Sources */,
 				2DAECFBD1C7AEE050022EFA1 /* RoundCornerViewController.m in Sources */,
 				2D098CF81CB9052900B184EA /* ExternTestViewController.m in Sources */,
@@ -1025,55 +1011,8 @@
 				GCC_PREFIX_HEADER = "${SRCROOT}/CodeExmple/Supporting Files/CodeExamplePCH.pch";
 				INFOPLIST_FILE = "CodeExmple/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-l\"AFNetworking\"",
-					"-l\"FMDB\"",
-					"-l\"JSONModel\"",
-					"-l\"MBProgressHUD\"",
-					"-l\"MagicalRecord\"",
-					"-l\"Mantle\"",
-					"-l\"Masonry\"",
-					"-l\"SDWebImage\"",
-					"-l\"YYKit\"",
-					"-l\"sqlite3\"",
-					"-l\"z\"",
-					"-framework",
-					"\"Accelerate\"",
-					"-framework",
-					"\"AssetsLibrary\"",
-					"-framework",
-					"\"CoreData\"",
-					"-framework",
-					"\"CoreFoundation\"",
-					"-framework",
-					"\"CoreGraphics\"",
-					"-framework",
-					"\"CoreImage\"",
-					"-framework",
-					"\"CoreText\"",
-					"-framework",
-					"\"Foundation\"",
-					"-framework",
-					"\"ImageIO\"",
-					"-framework",
-					"\"MobileCoreServices\"",
-					"-framework",
-					"\"QuartzCore\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-					"-framework",
-					"\"UIKit\"",
-					"-framework",
-					"\"WebP\"",
-					"-ObjC",
-					"-lz",
-					"-framework",
-					Reveal,
-				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.WanJianTechnology.CodeExmple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
@@ -1093,55 +1032,8 @@
 				GCC_PREFIX_HEADER = "${SRCROOT}/CodeExmple/Supporting Files/CodeExamplePCH.pch";
 				INFOPLIST_FILE = "CodeExmple/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-l\"AFNetworking\"",
-					"-l\"FMDB\"",
-					"-l\"JSONModel\"",
-					"-l\"MBProgressHUD\"",
-					"-l\"MagicalRecord\"",
-					"-l\"Mantle\"",
-					"-l\"Masonry\"",
-					"-l\"SDWebImage\"",
-					"-l\"YYKit\"",
-					"-l\"sqlite3\"",
-					"-l\"z\"",
-					"-framework",
-					"\"Accelerate\"",
-					"-framework",
-					"\"AssetsLibrary\"",
-					"-framework",
-					"\"CoreData\"",
-					"-framework",
-					"\"CoreFoundation\"",
-					"-framework",
-					"\"CoreGraphics\"",
-					"-framework",
-					"\"CoreImage\"",
-					"-framework",
-					"\"CoreText\"",
-					"-framework",
-					"\"Foundation\"",
-					"-framework",
-					"\"ImageIO\"",
-					"-framework",
-					"\"MobileCoreServices\"",
-					"-framework",
-					"\"QuartzCore\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-					"-framework",
-					"\"UIKit\"",
-					"-framework",
-					"\"WebP\"",
-					"-ObjC",
-					"-lz",
-					"-framework",
-					Reveal,
-				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.WanJianTechnology.CodeExmple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
