@@ -9,21 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>JSONModel.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MBProgressHUD.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MagicalRecord.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Mantle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -35,6 +20,11 @@
 			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Realm.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,12 +42,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>09FA060F1A0492FB25232F489AC4E573</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>0B37E55BC11C06931D5B4CEF1DA1AD71</key>
+		<key>425C58806AB0B55692F4DE6FCDA7FB07</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>46C3003E73E42B884B5E20E208A47E8F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>775D8249126592309C436066316A4D22</key>
+		<key>5829BCA4E7C85DD523C2F8EEBF4C3B59</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,17 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B8EEF54D1742A2EC69E43B80BBA7CBE6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D54AB3ECEB9A8FBA15D4F73CBE326692</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FE2F1D7B9D9FCEA148517E4657B243F4</key>
+		<key>B8D44654BA50EAA96121F045F899F760</key>
 		<dict>
 			<key>primary</key>
 			<true/>
